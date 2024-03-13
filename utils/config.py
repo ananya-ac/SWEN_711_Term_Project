@@ -4,3 +4,6 @@ class Grid():
 
 class Simulation():
     VEHICLES_PER_ZONE = 1
+    
+class Trip():
+    MAX_REQUEST_WAITING_TIME = 5
