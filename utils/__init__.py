@@ -27,9 +27,10 @@ class Grid:
         self.lambda_trip_gen = lambda_trip_gen
         # self.num_cars = num_cars
         self.dim = dim
-        self.num_zones = dim * dim
-        self.request_grid = np.zeros((dim, dim)) #stores count of unserved trips from zone(i) to dest(j)
-        self.active_vehicles = np.zeros((dim, dim))
+        self.num_zones = dim
+        self.request_grid = np.zeros((dim, dim)) #stores count of unserved trips from source(i) to dest(j)
+        self.vehicle_grid = np.zeros((dim, dim))
+        self.num_cars = num_cars
         
         # self.pending_trips = [] #not certain whether this would be useful
         # self.remaining_trips = [] #not certain whether this would be useful
@@ -50,9 +51,19 @@ class Grid:
                 self.request_grid[zone][destination]+=1
         return True
     
-    def initialize_vehicles_in_grid(self,dims, vehicle_per_zone):
-        return np.ones_like((dims,dims))*vehicle_per_zone
+    
         
     
     def get_dims(self):
         return self.dim
+    
+
+    def init_cars(self):
+        """initialize vehicles in different zones of the Grid."""
+        
+        cars_per_grid = self.num_cars // self.dim
+        for i in range(self.dim):
+            self.vehicle_grid[i][i] = cars_per_grid
+        self.vehicle_grid[self.dim - 1][self.dim - 1] += self.num_cars % cars_per_grid
+
+    
