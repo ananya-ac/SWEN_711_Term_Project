@@ -42,7 +42,7 @@ while (curr_time<=max_time):
     grid.request_grid, grid.vehicle_grid =  match(grid,trips)
 
     print(grid.request_grid)
-    for i in trips['unassigned']:
+    for i in trips.unassigned:
         print(i)
     
     
