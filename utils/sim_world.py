@@ -76,10 +76,11 @@ class Grid:
         trips = []
         for source in range(self.num_zones):
             num_trips = np.random.poisson(lam=self.lambda_trip_gen)
-            
-            for i in range(num_trips):
+            print(f"Number of trips generated at request grid loc {source} == {num_trips}")
+            for _ in range(num_trips):
                 destination = np.random.choice([j for j in range(self.num_zones) if j!=source], 
                                       size = 1)[0]
+                print(destination,self.request_grid)
                 new_trip = Trip(self.time_stamp,source=source, 
                                 destination=destination, pickup_time=0, 
                                 waiting_time = 0)
@@ -99,31 +100,39 @@ class TripTracker():
     def add_new_trips(self, trips):
         self.unassigned.extend(trips)
     
-    def assign_trips(self, matched_trips, vehicleInfo):
+    def assign_trips(self,curr_time:int, matching_info,all_vehicles:list[Car], travel_time):
         """
         Assigns trips to vehicles, creates a delta grid to be added to existing
         grid to for both the requests and vehicle positions. Shifts Trips from 
         self.unassigned to self.assigned class
         """
-        [vehicles, zone_info] = matched_trips
-        vehicle_delta = np.zeros((grd_conf.DIM, grd_conf.DIM))
-        request_delta = np.zeros((grd_conf.DIM, grd_conf.DIM))
-        for idx in range(vehicles):
+        print(matching_info)
+        for idx in range(len(matching_info)):
             # search vehicle
-            veh_found = False
-            for veh in vehicleInfo:
-                if veh.id == idx:
-                    vehicle = veh
-                    veh_found = not veh_found
-            if not veh_found:
+            veh_idx = -1
+            for veh in range(len(all_vehicles)):
+                if all_vehicles[veh].loc == matching_info[idx][0]:
+                    veh_idx = veh
+                    break
+            if veh_idx == -1:
                 raise Exception("Sorry, vehicle id not found")
-            veh_loc, pickup_zone = zone_info[idx]
+            elif not all_vehicles[veh].idle:
+                print('Vehicle already assigned')
+                continue
+            pickup_zone = matching_info[idx][1]
             for trip_idx in range(len(self.unassigned)):
                 trip = self.unassigned[trip_idx]
                 if trip.source == pickup_zone:
                     # update trip details
                     trip.assigned = 1
-                    trip.vehicle = vehicle
-                    
-                    self.assigned.append()
-                    
+                    trip.vehicle = all_vehicles[veh_idx].id
+                    trip.pickup_time = curr_time + travel_time[all_vehicles[veh_idx].loc][trip.source]
+                    # update vehicle info
+                    all_vehicles[veh_idx].idle =False
+                    all_vehicles[veh_idx].take_trip(trip.id)
+                    # remove from unassigned and append to assigned        
+                    self.assigned.append(self.unassigned.pop(trip_idx))
+                    print(f'Trip: {trip.id} => Status => {trip.assigned} veh => {trip.vehicle}')
+                    print(trip)
+                    break
+            
