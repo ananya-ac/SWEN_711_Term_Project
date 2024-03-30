@@ -16,5 +16,5 @@ def sort_by_elapsed_time(obj_list:list, key, current_time):
 
 
 def match(a,b):
-    # return [[vehicle.id,vehicle.id,..],[(vehicle.loc,pickup),...]]
-    return [[0,1,2,3],[(0,1), (1,2), (3,2), (0,2)]]
+    # return[(vehicle.loc,pickup),...]]
+    return [[(0,1), (1,2), (3,2), (0,2)]]
