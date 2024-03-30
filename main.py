@@ -47,7 +47,7 @@ while (curr_time<=max_time):
     grid.request_grid = request_grid_prime
     
     print(grid.request_grid)
-    #
+    
     for i in trip_tracker.unassigned:
         print("############# END OF THIS LOOP\n",i)
     

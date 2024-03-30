@@ -88,43 +88,7 @@ class Grid:
                 self.request_grid[source][destination]+=1
         return trips
 
-    def matching(self):
-        
-        """implements vehicle-passenger matching. First the passengers and vehicles 
-        in the same zone are matched, the remaining vehicles are dispatched by casting the 
-        matching problem as a Linear Sum Assignment Problem (LAP)"""
-        
-        
-        #match the vehicles and passengers in the same zone first
-
-        trips_per_zone = self.request_grid.sum(axis = 1)
-        free_cars_per_zone = self.vehicle_grid.diagonal()
-        same_per_zone = np.minimum(trips_per_zone, free_cars_per_zone).astype(int)
-        
-        
-        #calc remaining trips and vehicles remaining after initial matching 
-
-        trips_left = (trips_per_zone - same_per_zone).astype(int)
-        vehicles_left = (free_cars_per_zone - same_per_zone).astype(int)
-
-        #create the cost-matrix based on travel time
-        if trips_left.sum() > 0 and vehicles_left.sum() > 0:
-            # rlist = []
-            # clist = []
-            # for i in range(self.num_zones):
-            #     rlist += [i]*min(sum(trips_left),vehicles_left[i])
-            #     clist += [i]*min(sum(vehicles_left),trips_left[i])
-
-            # costs = np.zeros((len(rlist), len(clist)))
-            # for i in range(len(rlist)):
-            #     costs[i,:] = self.travel_time[rlist[i], clist]
-            # for j in range(len(clist)):
-            #     costs[:, j] = self.travel_time[rlist, clist[j]]
-
-            
-            cost_matrix = np.zeros(shape = (len(vehicles_left), len(trips_left)))
-            
-        return
+   
 
     
 class TripTracker():
