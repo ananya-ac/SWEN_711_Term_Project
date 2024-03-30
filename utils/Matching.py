@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.optimize import linear_sum_assignment
+from utils.config import INF
 
 def matching(u, v, vehicles, vehicle_engagement, travel_time):
     
@@ -26,9 +27,9 @@ def matching(u, v, vehicles, vehicle_engagement, travel_time):
         trips_left = same_per_zone[i]
         while trips_left > 0:
             for car in vehicles:
-                if car.cur_zone == i:
+                if car.loc == i:
                     car.on_trip = True
-                    vehicle_engagement[car.id] = True
+                    # vehicle_engagement[car.id] = True
                     destination = np.random.choice([k for k in range(len(u)) if u[i][k] != 0])
                     matched_pairs.append((i, i))
                     v[i][i] -= 1

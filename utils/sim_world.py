@@ -25,7 +25,7 @@ class Grid:
                  time_stamp,
                  dim = 4,
                  lambda_trip_gen = 4,
-                 num_cars = 4,
+                 num_cars = 16,
                  max_wait_time = 5) -> None:
         self.time_stamp = time_stamp
         self.lambda_trip_gen = lambda_trip_gen
@@ -76,11 +76,11 @@ class Grid:
         trips = []
         for source in range(self.num_zones):
             num_trips = np.random.poisson(lam=self.lambda_trip_gen)
-            print(f"Number of trips generated at request grid loc {source} == {num_trips}")
+            # print(f"Number of trips generated at request grid loc {source} == {num_trips}")
             for _ in range(num_trips):
                 destination = np.random.choice([j for j in range(self.num_zones) if j!=source], 
                                       size = 1)[0]
-                print(destination,self.request_grid)
+                # print(destination,self.request_grid)
                 new_trip = Trip(self.time_stamp,source=source, 
                                 destination=destination, pickup_time=0, 
                                 waiting_time = 0)
@@ -110,10 +110,12 @@ class TripTracker():
         for idx in range(len(matching_info)):
             # search vehicle
             veh_idx = -1
+            eligible_veh = []
             for veh in range(len(all_vehicles)):
-                if all_vehicles[veh].loc == matching_info[idx][0]:
+                if all_vehicles[veh].loc == matching_info[idx][0] and all_vehicles[veh].idle:
                     veh_idx = veh
                     break
+            
             if veh_idx == -1:
                 raise Exception("Sorry, vehicle id not found")
             elif not all_vehicles[veh].idle:
