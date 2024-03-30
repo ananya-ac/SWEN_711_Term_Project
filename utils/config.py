@@ -7,3 +7,5 @@ class Simulation():
     
 class Trip():
     MAX_REQUEST_WAITING_TIME = 5
+
+INF = 99999
