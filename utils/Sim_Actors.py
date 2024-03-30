@@ -14,7 +14,6 @@ class Car:
     """
     def __init__(self, id: int, loc:int) -> None:
         self.id = id
-        self.active = False
         self.idle = True
         self.trip = None
         self.loc = loc
