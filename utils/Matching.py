@@ -86,22 +86,26 @@ def matching(u, v, vehicles, vehicle_engagement, travel_time):
         #At this stage, same zone and least time cost traveller-passenger matching has 
         #been completed. If there are remaining cabs and trips, those are being matched
         #by the least time cost of the remaining potential trips.
-            
-        for source in row_dict:
-            if u.sum() > 0:
-                possible_dests = np.argwhere(u.sum(axis = 1) > 0).flatten()
-                min_time = np.inf
-                dest = 0
-                for pd in possible_dests:
-                    if travel_time[source][pd] < min_time:
-                        min_time = travel_time[source][pd]
-                        dest = pd
-                #dest = np.random.choice(np.argwhere(u.sum(axis = 1) > 0).flatten())
-                matched_pairs.append((source,dest))
-                dest2 = np.random.choice(np.argwhere(u[dest]>0).flatten())
-                u[dest][dest2] -= 1
-                v[source][source] -= 1
-                v[source][dest] += 1
+        trips_remaining = u.sum(axis = 1).astype(int)
+        vehicles_left = v.diagonal()
+        if trips_remaining.sum() > 0 and vehicles_left.sum() > 0:   
+            for source in row_dict:
+                if u.sum() > 0:
+                    possible_dests = np.argwhere(u.sum(axis = 1) > 0).flatten()
+                    min_time = np.inf
+                    dest = 0
+                    for pd in possible_dests:
+                        if travel_time[source][pd] < min_time:
+                            min_time = travel_time[source][pd]
+                            dest = pd
+                    #dest = np.random.choice(np.argwhere(u.sum(axis = 1) > 0).flatten())
+                    matched_pairs.append((source,dest))
+                    dest2 = np.random.choice(np.argwhere(u[dest]>0).flatten())
+                    u[dest][dest2] -= 1
+                    v[source][source] -= 1
+                    v[source][dest] += 1
+        
+    print(v)
                 
             
     return matched_pairs, u, v
