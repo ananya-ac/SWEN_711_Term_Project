@@ -128,11 +128,10 @@ class TripTracker():
                 continue
             pickup_zone = matching_info[idx][1]
             # trimming down the unassigned req
-            for trip_idx in range(len(self.unassigned)):
-                trip = self.unassigned[trip_idx]
+            for trip in self.unassigned:
                 if curr_time-trip.trip_gen_time>trip_conf.MAX_REQUEST_WAITING_TIME:
                         # print(f"@@@@@@@@@@@\n\nLOSS: TRIP {trip.id} waited for too long and now no more wanting a ride \n\n@@@@@@@@@@@")
-                        self.unassigned.pop(trip_idx)
+                        self.unassigned.pop(self.unassigned.index(trip))
             for trip_idx in range(len(self.unassigned)):
                 trip = self.unassigned[trip_idx]
                 if trip.source == pickup_zone and matching_info[idx][0]!=matching_info[idx][1]:
