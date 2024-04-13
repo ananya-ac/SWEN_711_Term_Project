@@ -103,18 +103,17 @@ class TripTracker():
             if trp.source==trp.destination:
                 print(trp)
     
-    def assign_trips(self,curr_time:int, matching_info,all_vehicles:list[Car], travel_time):
+    def assign_trips(self,curr_time:int, matching_info,all_vehicles:list[Car], travel_time, vehicle_grid_prime, request_grid_prime):
         """
         Assigns trips to vehicles, creates a delta grid to be added to existing
         grid to for both the requests and vehicle positions. Shifts Trips from 
         self.unassigned to self.assigned class
         """
-        print(matching_info)
-        
-        # for veh in all_vehicles:
-        #     print(veh)
+        print(f'Matching Info:{matching_info}')
+        post_matching_grid = vehicle_grid_prime.copy()
+        # print(post_matching_grid)
         for idx in range(len(matching_info)):
-            # search vehicle
+            # search idling vehicle in zone (i,i) 
             veh_idx = -1
             for veh in range(len(all_vehicles)):
                 if all_vehicles[veh].loc == matching_info[idx][0] and all_vehicles[veh].idle:
@@ -122,21 +121,19 @@ class TripTracker():
                     break
             if veh_idx == -1:
                 print('No Free vehicles RN!!')
-                return True
+                return request_grid_prime
             elif not all_vehicles[veh].idle:
                 print('Vehicle already assigned')
                 continue
             pickup_zone = matching_info[idx][1]
-            # trimming down the unassigned req
-            for trip in self.unassigned:
-                if curr_time-trip.trip_gen_time>trip_conf.MAX_REQUEST_WAITING_TIME:
-                        # print(f"@@@@@@@@@@@\n\nLOSS: TRIP {trip.id} waited for too long and now no more wanting a ride \n\n@@@@@@@@@@@")
-                        self.unassigned.pop(self.unassigned.index(trip))
+            
+            
             for trip_idx in range(len(self.unassigned)):
                 trip = self.unassigned[trip_idx]
+                #  Need to check the trip exists as per the post matching grid
                 if trip.source == pickup_zone and matching_info[idx][0]!=matching_info[idx][1]:
                     # update trip details
-                    trip.assigned = 1
+                    # trip.assigned = 1
                     trip.vehicle = all_vehicles[veh_idx].id
                     # print(f"{travel_time}\nTravel Time added = {travel_time[all_vehicles[veh_idx].loc][trip.source]}")
                     trip.pickup_time = curr_time + math.ceil(travel_time[all_vehicles[veh_idx].loc][trip.source])
@@ -149,17 +146,36 @@ class TripTracker():
                     # print(trip)
                     break
                 elif trip.source == pickup_zone and matching_info[idx][0]==matching_info[idx][1]:
+                    # Ensure that the trip and resultant grid also match
+                    veh = all_vehicles[veh_idx]
+                    if post_matching_grid[trip.source][trip.destination]:
+                        post_matching_grid[trip.source][trip.destination] -= 1
+                    else:
+                        print(f'Wrong Trip {trip}')
+                        continue
                     # update trip details
                     trip.assigned = 2
-                    trip.vehicle = all_vehicles[veh_idx].id
-                    trip.pickup_time = curr_time + math.ceil(travel_time[all_vehicles[veh_idx].loc][trip.source])
+                    trip.vehicle = veh.id
+                    trip.pickup_time = curr_time + math.ceil(travel_time[veh.loc][trip.source])
                     # update vehicle info
-                    all_vehicles[veh_idx].idle =False
-                    all_vehicles[veh_idx].take_trip(trip.id)
+                    veh.idle =False
+                    veh.take_trip(trip.id)
+                    print(f"3. Trip : {trip}, Vehicle Assigned :{veh}")
                     # remove from unassigned and append to assigned        
                     self.assigned.append(self.unassigned.pop(trip_idx))
                     break
+        return request_grid_prime
 
+    def pop_expired_trips(self, curr_time, request_grid_prime):
+        """Returns the request grid after popping from the unassigned list"""
+        for trip in self.unassigned:
+            if curr_time-trip.trip_gen_time>=trip_conf.MAX_REQUEST_WAITING_TIME:
+                    print(f"@@@@@@@@@@@\n\nLOSS: TRIP {trip.id} waited for too long and now no more wanting a ride --{(trip.source, trip.destination)}\n\n@@@@@@@@@@@")
+                    exp_trip = self.unassigned.pop(self.unassigned.index(trip))
+                    request_grid_prime[exp_trip.source][exp_trip.destination]-=1
+        print(f'Unassigned _trips : {len(self.unassigned)} Request_grid = \n{request_grid_prime}')
+        return request_grid_prime
+    
     def update_trips(self, curr_time, veh_grid ,all_vehicles, travel_time):
         """
         Check if the vehicle has reached the pickup zone by comparing the 
@@ -174,23 +190,28 @@ class TripTracker():
                 pass # yet to reach the pickup zone; do NOTHING
             elif trip.pickup_time==curr_time and trip.assigned ==1:
                 # reached pickup
-                trip.assigned = (trip.assigned+1)%3
+                trip.assigned = trip.assigned+1
                 i = vehicle.loc
                 j = trip.source
                 veh_grid[i][j] -= 1
+                print(f'1. Subtracting from{(i,j)}')
                 k = trip.destination
                 veh_grid[j][k] += 1
+                print(f'1. Adding to {(j,k)}')
                 vehicle.loc = j
                 trip.pickup_time = curr_time + math.ceil(travel_time[j][k])
                 print(f"Trip({trip.id}) status changed: \n\t\tStatus: Passenger Pickup Up\n\t\tVeh Loc:{j}\n\t\tDrop Time:{trip.pickup_time}\n\t\tDrop Loc : {j}")
             elif trip.pickup_time>curr_time and trip.assigned ==2:
                 pass # yet to reach the drop of zone; do NOTHING
-            else:
-                trip.assigned = (trip.assigned+1)%3
+            elif trip.pickup_time==curr_time and trip.assigned ==2:
+                trip.assigned = trip.assigned+1
                 i = vehicle.loc
+                # print(trip)
                 j = trip.destination
                 veh_grid[i][j] -= 1
                 veh_grid[j][j] += 1
+                print(f'2. Subtracting from{(i,j)}')
+                print(f'2. Adding to {(j,j)}')
                 vehicle.idle = True
                 self.completed.append(self.assigned.pop(self.assigned.index(trip)))
                 print(f"Trip({trip.id}) status changed: \n\t\tStatus: Passenger Dropped\n\t\tVeh Loc:{j}\n\t\tDrop Time:{trip.pickup_time}\n\t\tDrop Loc : {j}")

@@ -24,7 +24,9 @@ class Car:
     
     def __str__(self) -> str:
         string = f"Car No:{self.id} Loc:{self.loc} "
-        string+= f"Idling:{self.idle} Trip:{self.trip}"
+        string+= f"Idling:{self.idle} Trip:{self.trip} "
+        # if self.pickup_time:
+        #     string+= f'Pickup Time : {self.pickup_time}'
         return string
 
 class Trip:
