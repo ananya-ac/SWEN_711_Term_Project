@@ -64,6 +64,6 @@ class Trip:
         
 
     def __str__(self):
-        return "\t>> id:{} status:{} source:{} destination:{} time_gen:{}".format(
-            self.id,self.assigned, self.source,self.destination,self.trip_gen_time)
+        return "\t>> id:{} assigned:{} source:{} destination:{} time_gen:{} pickup_time:{}".format(
+            self.id,self.assigned, self.source,self.destination,self.trip_gen_time, self.pickup_time)
 
