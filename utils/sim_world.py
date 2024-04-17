@@ -34,8 +34,6 @@ class Grid:
         self.num_cars = num_cars
         self.dim = dim
         self.num_zones = dim 
-        # self.pending_trips = [] #not certain whether this would be useful
-        # self.remaining_trips = [] #not certain whether this would be useful
         self.request_grid = np.zeros(shape = (dim,dim)) 
         average_speed = 50
         self.dist_mat = np.array(np.random.randint(1,100, size=(4,4)))
@@ -46,6 +44,9 @@ class Grid:
         self.max_wait_time = max_wait_time
         self.pickup_schedule = []
         self.vehicle_engagement = {}
+        self.px_i = np.ones(shape=dim)
+        self.avg_stay_time = np.zeros(shape=dim)
+        self.zonal_profit = np.zeros(shape=dim)
 
         
     def init_cars(self, vehicles)->list:
@@ -59,9 +60,16 @@ class Grid:
             for i in range(self.dim):
                 self.vehicle_grid[i][i] = cars_per_grid
                 for k in range(cars_per_grid):
-                    cars.append(Car(len(vehicles)+car_no, i))
+                    if i==0:
+                        cars.append(Car(len(vehicles)+car_no, i+1))
+                        self.vehicle_grid[i+1][i+1] += 1
+                    else:
+                        cars.append(Car(len(vehicles)+car_no, i))
+                        self.vehicle_grid[i][i] += 1
                     car_no+=1
             self.vehicle_grid[self.dim - 1][self.dim - 1] += self.num_cars % cars_per_grid
+            # self.vehicle_grid = np.array([[0, 0, 0 ,0],[0, 2, 0, 0],[0, 0, 1, 0],[0, 0, 0, 1]])
+
         else:
             # implement code to decide whether based on the H(w) the driver is 
             # active or chooses to be inactive
@@ -84,19 +92,27 @@ class Grid:
                                       size = 1)[0]
                 # print(destination,self.request_grid)
                 new_trip = Trip(self.time_stamp,source=source, 
-                                destination=destination, pickup_time=pickup_time, 
-                                waiting_time = 0)
+                                destination=destination, 
+                                pickup_time=pickup_time, 
+                                waiting_time = 0, 
+                                time_taken = self.travel_time_mat[source][destination], 
+                                dist = self.dist_mat[source][destination])
                 trips.append(new_trip)
                 self.request_grid[source][destination]+=1
         return trips
 
+    def update_avg_stay_time(self,wait_time,zone,curr_time):
+        curr_stay_time = self.avg_stay_time[zone]
+        self.avg_stay_time[zone] = (curr_time-1)/(curr_time)*curr_stay_time + (
+                            1/curr_time)*(wait_time-curr_stay_time)
    
-class TripTracker():
-    def __init__(self) -> None:
+class TripTracker(): 
+    def __init__(self, grid:Grid) -> None:
         self.unassigned: list[Trip] = []
         self.assigned: list[Trip] = []
         self.active: list[Trip] = []
         self.completed: list[Trip] = []
+        self.grid = grid
     
     def add_new_trips(self, trips):
         self.unassigned.extend(trips)
@@ -140,7 +156,7 @@ class TripTracker():
                     trip.pickup_time = curr_time + math.ceil(travel_time[all_vehicles[veh_idx].loc][trip.source])
                     # update vehicle info
                     # all_vehicles[veh_idx].idle =False
-                    all_vehicles[veh_idx].take_trip(trip.id)
+                    all_vehicles[veh_idx].take_trip(trip.id,self.grid,curr_time)
                     # remove from unassigned and append to assigned
                     to_pop.append(trip)        
                     print(f'**********\n\nINFO:Trip: {trip.id} \nStatus => {trip.assigned} \nveh => {trip.vehicle}, \nDestination => {trip.destination}\nNext Drop Time => {trip.pickup_time}\nVehicle => {all_vehicles[veh_idx].__dict__}')
@@ -162,7 +178,7 @@ class TripTracker():
                     trip.pickup_time = curr_time + math.ceil(travel_time[trip.source][trip.destination])
                     # update vehicle info
                     veh.idle =False
-                    veh.take_trip(trip.id)
+                    veh.take_trip(trip.id,self.grid,curr_time)
                     print(f"3. Trip : {trip}, Vehicle Assigned :{veh}")
                     # remove from unassigned and append to assigned   
                     to_pop.append(trip)            
@@ -238,6 +254,7 @@ class TripTracker():
                 vehicle.trip = None
                 to_pop.append(trip)
                 print(f"Trip({trip.id}) status changed: \n\t\tStatus: Passenger Dropped\n\t\tVeh Loc:{j}\n\t\tDrop Time:{trip.pickup_time}\n\t\tDrop Loc : {j}")
+                vehicle.end_trip(curr_time)
             else:
                 print(4, trip)
         
@@ -274,7 +291,7 @@ class TripTracker():
                 # print('12,',vehicle_grid[vehicle_loc][vehicle_loc])
                 if vehicle_grid[vehicle_loc][vehicle_loc]:
                     trip.vehicle = pickup_car.id
-                    pickup_car.take_trip(trip_id=trip.id)
+                    pickup_car.take_trip(trip.id,self.grid,curr_time)
                     vehicle_grid[vehicle_loc][vehicle_loc] -= 1
                     if vehicle_loc != pickup_loc:
                         vehicle_grid[vehicle_loc][pickup_loc] += 1
@@ -285,6 +302,7 @@ class TripTracker():
                         trip.pickup_time = curr_time + math.ceil(travel_time[pickup_car.loc][dest])
                         trip.assigned = 2
                         request_grid[pickup_loc][dest] -= 1
+                        self.grid.zonal_profit[trip.source] += trip.cal_amount()
                     assigned_trip = self.unassigned.pop(self.unassigned.index(trip))
                     print("YO",assigned_trip)
                     self.assigned.append(assigned_trip)
