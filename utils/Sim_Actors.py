@@ -21,7 +21,7 @@ class Car:
         self.idle_time = 0
         self.last_idle_updated = 0
     
-    def take_trip(self, trip_id, grid,curr_time):
+    def take_trip(self, trip_id, grid, curr_time):
         # update_avg_stay_time(grid,curr_time- self.last_idle_updated,self.loc,curr_time)
         self.idle = False
         self.trip = trip_id
@@ -37,8 +37,17 @@ class Car:
         #     string+= f'Pickup Time : {self.pickup_time}'
         return string
     
-    def update_zone_stay_time(self):
-        pass    
+    def idle_time_increase(self):
+        self.idle_time += 1
+    
+    def reset_idle_time(self):
+        self.idle_time = 0
+    
+    def get_idle_time(self):
+        return self.idle_time   
+
+    def get_location(self):
+        return self.loc 
 
 class Trip:
     """

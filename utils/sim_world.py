@@ -45,36 +45,29 @@ class Grid:
         self.pickup_schedule = []
         self.vehicle_engagement = {}
         self.px_i = np.ones(shape=dim)
-        self.avg_stay_time = np.zeros(shape=dim)
+        self.total_idle_stay_time = np.zeros(shape=dim) #per zone
+        self.total_idle_cars = np.zeros(shape=dim) #per zone
         self.zonal_profit = np.zeros(shape=dim)
 
         
     def init_cars(self, vehicles)->list:
         """Num cars is fixed and uniformly distributed"""
-        if vehicles==[]:
+        cars = []
+        is_gen = False
+        if not vehicles:
             is_gen = True
-            print(f"===>> New trips generated for ")
-            cars = []
-            cars_per_grid = self.num_cars // self.dim
-            car_no = 0
-            for i in range(self.dim):
-                self.vehicle_grid[i][i] = cars_per_grid
-                for k in range(cars_per_grid):
-                    if i==0:
-                        cars.append(Car(len(vehicles)+car_no, i+1))
-                        self.vehicle_grid[i+1][i+1] += 1
-                    else:
-                        cars.append(Car(len(vehicles)+car_no, i))
-                        self.vehicle_grid[i][i] += 1
-                    car_no+=1
-            self.vehicle_grid[self.dim - 1][self.dim - 1] += self.num_cars % cars_per_grid
-            # self.vehicle_grid = np.array([[0, 0, 0 ,0],[0, 2, 0, 0],[0, 0, 1, 0],[0, 0, 0, 1]])
-
+            for veh_id in range(self.num_cars):
+                loc = np.random.choice(self.dim)
+                car = Car(veh_id, loc)
+                self.vehicle_grid[loc][loc] += 1
+                cars.append(car)
+            
         else:
             # implement code to decide whether based on the H(w) the driver is 
             # active or chooses to be inactive
-            cars =vehicles
-            is_gen =False
+            cars = vehicles
+            is_gen = False
+        
         return cars, is_gen
     
     def generate_trips(self, pickup_time):
@@ -101,10 +94,18 @@ class Grid:
                 self.request_grid[source][destination]+=1
         return trips
 
-    def update_avg_stay_time(self,wait_time,zone,curr_time):
-        curr_stay_time = self.avg_stay_time[zone]
-        self.avg_stay_time[zone] = (curr_time-1)/(curr_time)*curr_stay_time + (
-                            1/curr_time)*(wait_time-curr_stay_time)
+    def get_idle_vehicle_per_zone(self):
+        return self.total_idle_cars
+    
+    def get_idle_time_per_zone(self):
+        return self.total_idle_stay_time
+    
+    def idle_car_per_zone_increase(self, zone):
+        self.total_idle_cars[zone] += 1
+    
+    def idle_time_per_zone_increase(self, zone):
+        self.total_idle_stay_time[zone] += 1
+
    
 class TripTracker(): 
     def __init__(self, grid:Grid) -> None:

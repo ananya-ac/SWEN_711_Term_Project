@@ -17,30 +17,30 @@ max_time = 100 # Max Simulation Time
 
 all_vehicles = []
 curr_time = 0
-num_cars =4
+num_cars = 4
 grid= Grid(curr_time,dim = 4, lambda_trip_gen = 4,num_cars = num_cars,
             max_wait_time = 5)
 trip_tracker = TripTracker(grid=grid)
-print(grid.travel_time_mat)
-print(grid.dist_mat)
+#print(grid.travel_time_mat)
+#print(grid.dist_mat)
 ##### init cars
-veh , is_gen =grid.init_cars(all_vehicles)
-print(f'Vehicles => {veh}, {is_gen}')
+veh , is_gen = grid.init_cars(all_vehicles)
+#print(f'Vehicles => {veh}, {is_gen}')
 if is_gen:
     all_vehicles.extend(veh)
-print('Generating Vehicles   : \n')
-for veh in all_vehicles:
-    print(veh)
+# print('Generating Vehicles   : \n')
+# for veh in all_vehicles:
+#     print(veh)
 
 
 ##### get new trips of this time instance
 ## the grid.request grid has been updated with the num of trips generated
 # trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
 
-while  (curr_time<100):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
+while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
     curr_time+=1
-    print(f'Current Time = {curr_time}')
-    print("Zonal Profit", grid.zonal_profit)
+    # print(f'Current Time = {curr_time}')
+    # print("Zonal Profit", grid.zonal_profit)
     # trip_tracker.add_new_trips(grid.generate_trips())# works like queue enqueue
     
     if curr_time>3:
@@ -51,7 +51,7 @@ while  (curr_time<100):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
     ##### match trips
 
     # print(f"Before matching at Time = {curr_time}",grid.request_grid.sum(axis=1), grid.vehicle_grid.diagonal(), grid.vehicle_grid.sum(axis=1))
-    print('\n1.Vehicle Grid\n',grid.vehicle_grid)
+    #print('Vehicle Grid\n',grid.vehicle_grid)
     # u,v = grid.request_grid[:], grid.vehicle_grid[:]
     matching_info =  matching(
         u=grid.request_grid[:], #grid,trip_tracker)
@@ -60,7 +60,7 @@ while  (curr_time<100):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
         vehicle_engagement={},
         travel_time=grid.travel_time_mat
         )
-    print('Matching info', matching_info )
+    #print('Matching info', matching_info )
     if ((grid.vehicle_grid < 0).sum()) > 0 and ((grid.request_grid < 0).sum()> 0):
         raise Exception('BC MC')
     # for kth_match in matching_info:
@@ -80,24 +80,27 @@ while  (curr_time<100):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
     # print(f"After matching at Time = {curr_time}",grid.request_grid.sum(axis=1), grid.vehicle_grid.diagonal())
     trip_tracker.update_trips(curr_time, grid.vehicle_grid, all_vehicles, grid.travel_time_mat)
     
-    print("############# Unassigned Trips\n")
-    for i in trip_tracker.unassigned:
-        print(i)
-    print("############# Assigned Trips\n")
-    for i in trip_tracker.assigned:
-        print(i)
+    # print("############# Unassigned Trips\n")
+    # for i in trip_tracker.unassigned:
+    #     print(i)
+    # print("############# Assigned Trips\n")
+    # for i in trip_tracker.assigned:
+    #     print(i)
     
-    nalla= {}
+    
     for veh in all_vehicles:
         if veh.idle:
-            print(nalla)
-            nalla[veh.loc]  =  nalla.get(veh.loc, [])
-            nalla[veh.loc].append((1,veh.loc,curr_time))
-   
-    for loc in nalla.keys():
-        grid.avg_stay_time[loc]+=1
+            veh.idle_time_increase()
+            grid.idle_time_per_zone_increase(veh.get_location())
+            if veh.get_idle_time() == 1:
+                grid.idle_car_per_zone_increase(veh.get_location())
+    
         
-    print(f'Avg Stay Duration : {grid.avg_stay_time}')
+    avg_stay_time = grid.get_idle_time_per_zone() / grid.get_idle_vehicle_per_zone()
+    avg_stay_time = np.nan_to_num(avg_stay_time)
+    
+    print(grid.vehicle_grid)
+    print(f'Avg Stay Duration : {avg_stay_time}')
     # print("############# Vehicles \n")
     # for v in all_vehicles:
     #     print(v)
