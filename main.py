@@ -2,7 +2,10 @@ import numpy as np
 from utils.sim_world import Grid, TripTracker
 from utils import match
 from utils.Matching import matching
-from utils.repositioning import update_avg_stay_time
+import warnings
+import pdb
+import utils.config as cfg
+warnings.filterwarnings("error")
 # We need to 
 # - Track time based grids
 # - init the Grid
@@ -32,21 +35,18 @@ if is_gen:
 # for veh in all_vehicles:
 #     print(veh)
 
-
 ##### get new trips of this time instance
 ## the grid.request grid has been updated with the num of trips generated
 # trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
 
-while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
-    curr_time+=1
-    # print(f'Current Time = {curr_time}')
-    # print("Zonal Profit", grid.zonal_profit)
-    # trip_tracker.add_new_trips(grid.generate_trips())# works like queue enqueue
+while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
     
+    print(cfg.TRAVEL_TIME_MATRIX)
+
     if curr_time>3:
         grid.request_grid = trip_tracker.pop_expired_trips(curr_time, grid.request_grid)
-    if curr_time%3 == 0 and curr_time>1 and curr_time<10 and False:
-        print(f'Generating New Trips @ Curr time == {curr_time}!!')
+    if curr_time%3 == 0 and curr_time>1 and curr_time<10:
+        #print(f'Generating New Trips @ Curr time == {curr_time}!!')
         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
     ##### match trips
 
@@ -58,7 +58,6 @@ while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid
         v=grid.vehicle_grid[:],
         vehicles=all_vehicles,
         vehicle_engagement={},
-        travel_time=grid.travel_time_mat
         )
     #print('Matching info', matching_info )
     if ((grid.vehicle_grid < 0).sum()) > 0 and ((grid.request_grid < 0).sum()> 0):
@@ -70,7 +69,6 @@ while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid
     grid.vehicle_grid, grid.request_grid = trip_tracker.assign_trips_new(curr_time, 
                                     matching_info,
                                     all_vehicles, 
-                                    grid.travel_time_mat,
                                     grid.request_grid,
                                     grid.vehicle_grid)
     # print('Request Grid post matching\n',request_grid_prime)
@@ -78,14 +76,19 @@ while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid
     # grid.request_grid = request_grid_prime
     
     # print(f"After matching at Time = {curr_time}",grid.request_grid.sum(axis=1), grid.vehicle_grid.diagonal())
-    trip_tracker.update_trips(curr_time, grid.vehicle_grid, all_vehicles, grid.travel_time_mat)
+    trip_tracker.update_trips(curr_time, grid.vehicle_grid, all_vehicles)
     
-    # print("############# Unassigned Trips\n")
-    # for i in trip_tracker.unassigned:
-    #     print(i)
-    # print("############# Assigned Trips\n")
-    # for i in trip_tracker.assigned:
-    #     print(i)
+    #print("############# Unassigned Trips\n")
+    for i in trip_tracker.unassigned:
+        if i.pickup_time > 600:
+            print(i)
+            print(i.pickup_time)
+    #print("############# Assigned Trips\n")
+    #print()
+    for i in trip_tracker.assigned:
+        if i.pickup_time > 600:
+            print(i)
+            print(i.pickup_time)
     
     
     for veh in all_vehicles:
@@ -96,10 +99,19 @@ while  (curr_time<2):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid
                 grid.idle_car_per_zone_increase(veh.get_location())
     
         
-    avg_stay_time = grid.get_idle_time_per_zone() / grid.get_idle_vehicle_per_zone()
-    avg_stay_time = np.nan_to_num(avg_stay_time)
     
-    print(grid.vehicle_grid)
+    
+    try:
+        a = grid.get_idle_time_per_zone()[:]
+        b = grid.get_idle_vehicle_per_zone()[:]
+        avg_stay_time = np.divide(a, b, out=np.zeros_like(a), where=b!=0)
+        avg_stay_time = np.nan_to_num(avg_stay_time)
+    except RuntimeWarning:
+        pdb.set_trace()
+
+    curr_time+=1
+    
+    # print(grid.vehicle_grid)
     print(f'Avg Stay Duration : {avg_stay_time}')
     # print("############# Vehicles \n")
     # for v in all_vehicles:
