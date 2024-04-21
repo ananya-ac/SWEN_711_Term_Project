@@ -1,9 +1,10 @@
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 from utils.config import INF
+import utils.config as cfg
 import pdb
 
-def matching(u, v, vehicles, vehicle_engagement, travel_time):
+def matching(u, v, vehicles, vehicle_engagement):
         
         """implements vehicle-passenger matching. First the passengers and vehicles 
         in the same zone are matched, the remaining vehicles are dispatched by casting the 
@@ -60,7 +61,7 @@ def matching(u, v, vehicles, vehicle_engagement, travel_time):
                     row_dict[source] = []
                     sources.append(source)
                 while rem_vehicles > 0:
-                    cost_row = travel_time[source]
+                    cost_row = np.array(cfg.TRAVEL_TIME_MATRIX[source])
                     cost_row[u_copy.sum(axis=1) == 0] = INF
                     row_dict[source].append(cost_row)
                     rem_vehicles -= 1
@@ -97,8 +98,8 @@ def matching(u, v, vehicles, vehicle_engagement, travel_time):
                     min_time = INF
                     dest = 0
                     for pd in possible_dests:
-                        if travel_time[source][pd] < min_time:
-                            min_time = travel_time[source][pd]
+                        if cfg.TRAVEL_TIME_MATRIX[source][pd] < min_time:
+                            min_time = cfg.TRAVEL_TIME_MATRIX[source][pd]
                             dest = pd
                     #dest = np.random.choice(np.argwhere(u.sum(axis = 1) > 0).flatten())
                     matched_pairs.append((source,dest))

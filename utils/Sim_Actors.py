@@ -1,6 +1,5 @@
 import uuid
 import numpy as np
-from utils.repositioning import update_avg_stay_time
 from utils.config import HyperParams as h
 class Car:
     """

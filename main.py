@@ -6,6 +6,7 @@ from utils.repositioning import update_avg_stay_time
 from utils.Sim_Actors import Trip
 from utils.config import MainParmas as cfg
 import math
+
 # We need to 
 # - Track time based grids
 # - init the Grid
@@ -35,19 +36,19 @@ if is_gen:
 # for veh in all_vehicles:
 #     print(veh)
 
-
 ##### get new trips of this time instance
 ## the grid.request grid has been updated with the num of trips generated
 trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
 
-while  ((np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) or curr_time<500 :
-    # if grid.travel_time_mat.all() != grid.travel_time_mat_cp.all():
-    print(grid.travel_time_mat)
-    if (curr_time>3):
+
+while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
+    
+
+    if curr_time>3:
         grid.request_grid = trip_tracker.pop_expired_trips(curr_time, grid.request_grid)
     if (curr_time%3 == 0 and curr_time>1) and (
         curr_time<cfg.num_trip_gen_rounds*3+1) and cfg.generate_new_trips:
-        print(f'Generating New Trips @ Curr time == {curr_time}!!')
+        #print(f'Generating New Trips @ Curr time == {curr_time}!!')
         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
     
     ##### match trips
@@ -56,7 +57,6 @@ while  ((np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=
         v=grid.vehicle_grid[:],
         vehicles=all_vehicles,
         vehicle_engagement={},
-        travel_time=grid.travel_time_mat
         )
     #print('Matching info', matching_info )
     if ((grid.vehicle_grid < 0).sum()) > 0 and ((grid.request_grid < 0).sum()> 0):
@@ -68,7 +68,6 @@ while  ((np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=
     grid.vehicle_grid, grid.request_grid = trip_tracker.assign_trips_new(curr_time, 
                                     matching_info,
                                     all_vehicles, 
-                                    grid.travel_time_mat,
                                     grid.request_grid,
                                     grid.vehicle_grid)
     # print('Request Grid post matching\n',request_grid_prime)
@@ -76,14 +75,19 @@ while  ((np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=
     # grid.request_grid = request_grid_prime
     
     # print(f"After matching at Time = {curr_time}",grid.request_grid.sum(axis=1), grid.vehicle_grid.diagonal())
-    trip_tracker.update_trips(curr_time, grid.vehicle_grid, all_vehicles, grid.travel_time_mat)
+    trip_tracker.update_trips(curr_time, grid.vehicle_grid, all_vehicles)
     
-    # print("############# Unassigned Trips\n")
-    # for i in trip_tracker.unassigned:
-    #     print(i)
-    # print("############# Assigned Trips\n")
-    # for i in trip_tracker.assigned:
-    #     print(i)
+    #print("############# Unassigned Trips\n")
+    for i in trip_tracker.unassigned:
+        if i.pickup_time > 600:
+            print(i)
+            print(i.pickup_time)
+    #print("############# Assigned Trips\n")
+    #print()
+    for i in trip_tracker.assigned:
+        if i.pickup_time > 600:
+            print(i)
+            print(i.pickup_time)
     
     grid.update_transition_matrix()
     
@@ -117,10 +121,19 @@ while  ((np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=
                 # trip = relocate_vehicle(veh, relocation_state)
 
         
-    avg_stay_time = grid.get_idle_time_per_zone() / grid.get_idle_vehicle_per_zone()
-    avg_stay_time = np.nan_to_num(avg_stay_time)
     
-    print(grid.vehicle_grid)
+    
+    try:
+        a = grid.get_idle_time_per_zone()[:]
+        b = grid.get_idle_vehicle_per_zone()[:]
+        avg_stay_time = np.divide(a, b, out=np.zeros_like(a), where=b!=0)
+        avg_stay_time = np.nan_to_num(avg_stay_time)
+    except RuntimeWarning:
+        pdb.set_trace()
+
+    curr_time+=1
+    
+    # print(grid.vehicle_grid)
     print(f'Avg Stay Duration : {avg_stay_time}')
     # print("############# Vehicles \n")
     # for v in all_vehicles:
