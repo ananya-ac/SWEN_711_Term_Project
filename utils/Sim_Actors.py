@@ -48,6 +48,26 @@ class Car:
     def get_location(self):
         return self.loc 
 
+    def _will_relocate(self, lambda_i:int):
+        return lambda_i * np.exp(-lambda_i)
+    
+    def relocate_to(self, lambda_relocate,transition_matrix):
+        '''
+        Two step process, sample to see whether it wants to move and if wants;
+        using the transition matrix choose the transition state
+        '''
+        relocation_willingness = self._will_relocate(lambda_relocate)
+        should_relocate = np.random.choice([True, False], 1, 
+                        p=[relocation_willingness, 1-relocation_willingness])
+        if not should_relocate:
+            return -1, relocation_willingness 
+        else:
+            transition_prob = transition_matrix[self.loc]
+            num_dims = len(transition_prob)
+            transition_state = np.random.choice(list(range(num_dims)), 1,
+                                                p=transition_prob)
+        
+        return transition_state[0], relocation_willingness
 class Trip:
     """
         Trips class encompasses all request related information

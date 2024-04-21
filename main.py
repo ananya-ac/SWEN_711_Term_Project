@@ -2,10 +2,11 @@ import numpy as np
 from utils.sim_world import Grid, TripTracker
 from utils import match
 from utils.Matching import matching
-import warnings
-import pdb
-import utils.config as cfg
-warnings.filterwarnings("error")
+from utils.repositioning import update_avg_stay_time
+from utils.Sim_Actors import Trip
+from utils.config import MainParmas as cfg
+import math
+
 # We need to 
 # - Track time based grids
 # - init the Grid
@@ -37,24 +38,22 @@ if is_gen:
 
 ##### get new trips of this time instance
 ## the grid.request grid has been updated with the num of trips generated
-# trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
+trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
+
 
 while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
     
-    print(cfg.TRAVEL_TIME_MATRIX)
 
     if curr_time>3:
         grid.request_grid = trip_tracker.pop_expired_trips(curr_time, grid.request_grid)
-    if curr_time%3 == 0 and curr_time>1 and curr_time<10:
+    if (curr_time%3 == 0 and curr_time>1) and (
+        curr_time<cfg.num_trip_gen_rounds*3+1) and cfg.generate_new_trips:
         #print(f'Generating New Trips @ Curr time == {curr_time}!!')
         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
+    
     ##### match trips
-
-    # print(f"Before matching at Time = {curr_time}",grid.request_grid.sum(axis=1), grid.vehicle_grid.diagonal(), grid.vehicle_grid.sum(axis=1))
-    #print('Vehicle Grid\n',grid.vehicle_grid)
-    # u,v = grid.request_grid[:], grid.vehicle_grid[:]
     matching_info =  matching(
-        u=grid.request_grid[:], #grid,trip_tracker)
+        u=grid.request_grid[:],
         v=grid.vehicle_grid[:],
         vehicles=all_vehicles,
         vehicle_engagement={},
@@ -90,6 +89,7 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
             print(i)
             print(i.pickup_time)
     
+    grid.update_transition_matrix()
     
     for veh in all_vehicles:
         if veh.idle:
@@ -97,7 +97,29 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
             grid.idle_time_per_zone_increase(veh.get_location())
             if veh.get_idle_time() == 1:
                 grid.idle_car_per_zone_increase(veh.get_location())
-    
+            
+            relocation_state, confidence = veh.relocate_to(grid.get_lambda()[veh.loc], 
+                            grid.vehicle_transition_matrix)
+            
+            print(f"Veh :{veh.id} Curr_loc : {veh.loc} Reloc Confidence : {confidence} State = {relocation_state}")
+            if relocation_state!=-1:
+                reloc_trip = Trip(curr_time, 
+                            veh.loc,
+                            relocation_state,
+                            grid.dist_mat[veh.loc][relocation_state],
+                            grid.travel_time_mat[veh.loc][relocation_state],
+                            pickup_time=curr_time + math.ceil(
+                                grid.travel_time_mat[veh.loc][relocation_state]))
+                reloc_trip.assigned = 2
+                reloc_trip.vehicle = veh.id
+                print(f"New Relocation trip created : {reloc_trip}")
+                trip_tracker.assigned.append(reloc_trip)
+                grid.vehicle_grid[veh.loc][relocation_state]+=1
+                grid.vehicle_grid[veh.loc][veh.loc]-=1
+                veh_index = all_vehicles.index(veh)
+                all_vehicles[veh_index].idle = False
+                # trip = relocate_vehicle(veh, relocation_state)
+
         
     
     
@@ -119,6 +141,4 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
     # print("############# Round Ends\nRequests:\n",grid.request_grid, 
     #       '\nVehicles:\n',grid.vehicle_grid)
     
-    
-
-    
+    curr_time+=1

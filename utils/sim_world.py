@@ -44,6 +44,7 @@ class Grid:
         self.total_idle_stay_time = np.zeros(shape=dim) #per zone
         self.total_idle_cars = np.zeros(shape=dim) #per zone
         self.zonal_profit = np.zeros(shape=dim)
+        self.vehicle_transition_matrix =  np.zeros(shape = (dim,dim)) 
 
         
     def init_cars(self, vehicles)->list:
@@ -103,6 +104,23 @@ class Grid:
     def idle_time_per_zone_increase(self, zone):
         self.total_idle_stay_time[zone] += 1
 
+    def get_lambda(self):
+        avg_stay_duration = self.get_idle_time_per_zone() / self.get_idle_vehicle_per_zone()
+        avg_stay_duration = np.nan_to_num(avg_stay_duration)
+        return np.reciprocal(avg_stay_duration)
+    
+    def update_transition_matrix(self):
+        for i in range(self.dim):
+            total_prof_per_dist = 0
+            for j in range(self.dim):
+                if i==j:
+                    self.vehicle_transition_matrix[i][j] = 0
+                else:
+                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/self.dist_mat[i][j]
+                    total_prof_per_dist += self.zonal_profit[j]/self.dist_mat[i][j]
+            self.vehicle_transition_matrix[i] /= total_prof_per_dist
+            
+                    
    
 class TripTracker(): 
     def __init__(self, grid:Grid) -> None:
@@ -116,10 +134,7 @@ class TripTracker():
         self.unassigned.extend(trips)
         for trp in self.unassigned:
             if trp.source==trp.destination:
-                #print(trp)
-                continue
-    
-   
+                print(trp)
 
     def pop_expired_trips(self, curr_time, request_grid_prime):
         """Returns the request grid after popping from the unassigned list"""
@@ -254,5 +269,4 @@ class TripTracker():
                 
             return vehicle_grid[:], request_grid[:]
                 
-                    
             
