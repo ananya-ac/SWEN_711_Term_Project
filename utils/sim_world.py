@@ -9,18 +9,6 @@ import pdb
 
 # model defs
 
-class Simulation():
-    def __init__(self, grid, vehicles_per_zone = sim_conf.VEHICLES_PER_ZONE) -> None:
-        self.grid:Grid = None
-        dims = self.grid.get_dims()
-        self.dist_mat = np.array(np.random.randint(1,100, size=(dims,dims)))
-        self.average_speed = 50
-        self.travel_time = self.dist_mat/self.average_speed
-        self.price_mult = np.ones((dims*dims))
-        self.vehicles_per_zone = vehicles_per_zone
-    
-    def init_grid(self):
-        self.grid.generate_trips()
 
 class Grid:
     """Grid-world"""
@@ -110,14 +98,15 @@ class Grid:
         return np.reciprocal(avg_stay_duration)
     
     def update_transition_matrix(self):
+        dist_mat = cfg.DIST_MATRIX
         for i in range(self.dim):
             total_prof_per_dist = 0
             for j in range(self.dim):
                 if i==j:
                     self.vehicle_transition_matrix[i][j] = 0
                 else:
-                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/self.dist_mat[i][j]
-                    total_prof_per_dist += self.zonal_profit[j]/self.dist_mat[i][j]
+                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/dist_mat[i][j]
+                    total_prof_per_dist += self.zonal_profit[j]/dist_mat[i][j]
             self.vehicle_transition_matrix[i] /= total_prof_per_dist
             
                     

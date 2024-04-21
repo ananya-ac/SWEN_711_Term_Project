@@ -2,9 +2,9 @@ import numpy as np
 from utils.sim_world import Grid, TripTracker
 from utils import match
 from utils.Matching import matching
-from utils.repositioning import update_avg_stay_time
 from utils.Sim_Actors import Trip
 from utils.config import MainParmas as cfg
+from utils.config import DIST_MATRIX, TRAVEL_TIME_MATRIX
 import math
 
 # We need to 
@@ -101,15 +101,16 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
             relocation_state, confidence = veh.relocate_to(grid.get_lambda()[veh.loc], 
                             grid.vehicle_transition_matrix)
             
-            print(f"Veh :{veh.id} Curr_loc : {veh.loc} Reloc Confidence : {confidence} State = {relocation_state}")
+            
             if relocation_state!=-1:
+                print(f"Veh :{veh.id} Curr_loc : {veh.loc} Reloc Confidence : {confidence} State = {relocation_state}")
                 reloc_trip = Trip(curr_time, 
                             veh.loc,
                             relocation_state,
-                            grid.dist_mat[veh.loc][relocation_state],
-                            grid.travel_time_mat[veh.loc][relocation_state],
+                            DIST_MATRIX[veh.loc][relocation_state],
+                            TRAVEL_TIME_MATRIX[veh.loc][relocation_state],
                             pickup_time=curr_time + math.ceil(
-                                grid.travel_time_mat[veh.loc][relocation_state]))
+                                TRAVEL_TIME_MATRIX[veh.loc][relocation_state]))
                 reloc_trip.assigned = 2
                 reloc_trip.vehicle = veh.id
                 print(f"New Relocation trip created : {reloc_trip}")
@@ -118,11 +119,7 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
                 grid.vehicle_grid[veh.loc][veh.loc]-=1
                 veh_index = all_vehicles.index(veh)
                 all_vehicles[veh_index].idle = False
-                # trip = relocate_vehicle(veh, relocation_state)
 
-        
-    
-    
     try:
         a = grid.get_idle_time_per_zone()[:]
         b = grid.get_idle_vehicle_per_zone()[:]
@@ -141,4 +138,3 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
     # print("############# Round Ends\nRequests:\n",grid.request_grid, 
     #       '\nVehicles:\n',grid.vehicle_grid)
     
-    curr_time+=1
