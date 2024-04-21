@@ -48,6 +48,7 @@ class Grid:
         self.total_idle_stay_time = np.zeros(shape=dim) #per zone
         self.total_idle_cars = np.zeros(shape=dim) #per zone
         self.zonal_profit = np.zeros(shape=dim)
+        self.vehicle_transition_matrix =  np.zeros(shape = (dim,dim)) 
 
         
     def init_cars(self, vehicles)->list:
@@ -106,6 +107,23 @@ class Grid:
     def idle_time_per_zone_increase(self, zone):
         self.total_idle_stay_time[zone] += 1
 
+    def get_lambda(self):
+        avg_stay_duration = self.get_idle_time_per_zone() / self.get_idle_vehicle_per_zone()
+        avg_stay_duration = np.nan_to_num(avg_stay_duration)
+        return np.reciprocal(avg_stay_duration)
+    
+    def update_transition_matrix(self):
+        for i in range(self.dim):
+            total_prof_per_dist = 0
+            for j in range(self.dim):
+                if i==j:
+                    self.vehicle_transition_matrix[i][j] = 0
+                else:
+                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/self.dist_mat[i][j]
+                    total_prof_per_dist += self.zonal_profit[j]/self.dist_mat[i][j]
+            self.vehicle_transition_matrix[i] /= total_prof_per_dist
+            
+                    
    
 class TripTracker(): 
     def __init__(self, grid:Grid) -> None:
@@ -121,73 +139,6 @@ class TripTracker():
             if trp.source==trp.destination:
                 print(trp)
     
-    def assign_trips(self,curr_time:int, matching_info,all_vehicles:list[Car], travel_time, vehicle_grid_prime, request_grid_prime):
-        """
-        Assigns trips to vehicles, creates a delta grid to be added to existing
-        grid to for both the requests and vehicle positions. Shifts Trips from 
-        self.unassigned to self.assigned class
-        """
-        print(f'Matching Info:{matching_info}')
-        post_matching_grid = vehicle_grid_prime[:]
-        # print(post_matching_grid)
-        for idx in range(len(matching_info)):
-            # search idling vehicle in zone (i,i) 
-            veh_idx = -1
-            for veh in range(len(all_vehicles)):
-                if all_vehicles[veh].loc == matching_info[idx][0] and all_vehicles[veh].idle:
-                    veh_idx = veh
-                    break
-            if veh_idx == -1:
-                print('No Free vehicles RN!!')
-                return request_grid_prime, vehicle_grid_prime
-            elif not all_vehicles[veh].idle:
-                print('Vehicle already assigned')
-                continue
-            pickup_zone = matching_info[idx][1]
-            
-            to_pop = []
-            for trip_idx in range(len(self.unassigned)):
-                trip = self.unassigned[trip_idx]
-                #  Need to check the trip exists as per the post matching grid
-                if trip.source == pickup_zone and matching_info[idx][0]!=matching_info[idx][1]:
-                    # update trip details
-                    trip.assigned = 1
-                    trip.vehicle = all_vehicles[veh_idx].id
-                    # print(f"{travel_time}\nTravel Time added = {travel_time[all_vehicles[veh_idx].loc][trip.source]}")
-                    trip.pickup_time = curr_time + math.ceil(travel_time[all_vehicles[veh_idx].loc][trip.source])
-                    # update vehicle info
-                    # all_vehicles[veh_idx].idle =False
-                    all_vehicles[veh_idx].take_trip(trip.id,self.grid,curr_time)
-                    # remove from unassigned and append to assigned
-                    to_pop.append(trip)        
-                    print(f'**********\n\nINFO:Trip: {trip.id} \nStatus => {trip.assigned} \nveh => {trip.vehicle}, \nDestination => {trip.destination}\nNext Drop Time => {trip.pickup_time}\nVehicle => {all_vehicles[veh_idx].__dict__}')
-                    # print(trip)
-                    break
-                elif trip.source == pickup_zone and matching_info[idx][0]==matching_info[idx][1]:
-                    # Ensure that the trip and resultant grid also match
-                    veh = all_vehicles[veh_idx]
-                    # if post_matching_grid[trip.source][trip.destination]:
-                    #     post_matching_grid[trip.source][trip.destination] -= 1
-                    #     if (post_matching_grid < 0).sum() > 0:
-                    #         pdb.set_trace()
-                    # else:
-                    #     print(f'Wrong Trip {trip}')
-                    #     continue
-                    # update trip details
-                    trip.assigned = 2
-                    trip.vehicle = veh.id
-                    trip.pickup_time = curr_time + math.ceil(travel_time[trip.source][trip.destination])
-                    # update vehicle info
-                    veh.idle =False
-                    veh.take_trip(trip.id,self.grid,curr_time)
-                    print(f"3. Trip : {trip}, Vehicle Assigned :{veh}")
-                    # remove from unassigned and append to assigned   
-                    to_pop.append(trip)            
-                    break
-            for t in to_pop:
-                self.assigned.append(self.unassigned.pop(self.unassigned.index(t)))
-        return request_grid_prime, vehicle_grid_prime
-
     def pop_expired_trips(self, curr_time, request_grid_prime):
         """Returns the request grid after popping from the unassigned list"""
         print(f'>>>>>>>>Unassigned _trips : {len(self.unassigned)} Request_grid = \n',f'{request_grid_prime}')
@@ -293,6 +244,7 @@ class TripTracker():
                 if vehicle_grid[vehicle_loc][vehicle_loc]:
                     trip.vehicle = pickup_car.id
                     pickup_car.take_trip(trip.id,self.grid,curr_time)
+                    pickup_car.reset_idle_time()
                     vehicle_grid[vehicle_loc][vehicle_loc] -= 1
                     if vehicle_loc != pickup_loc:
                         vehicle_grid[vehicle_loc][pickup_loc] += 1
@@ -311,5 +263,4 @@ class TripTracker():
                 
             return vehicle_grid[:], request_grid[:]
                 
-                    
             
