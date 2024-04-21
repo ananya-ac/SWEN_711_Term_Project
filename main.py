@@ -51,9 +51,9 @@ while(curr_time<4):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.d
         curr_time<cfg.num_trip_gen_rounds*3+1) and cfg.generate_new_trips:
         #print(f'Generating New Trips @ Curr time == {curr_time}!!')
         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
-    print("Before Matching")
-    print(grid.vehicle_grid)
-    print(grid.request_grid)
+    # print("Before Matching")
+    # print(grid.vehicle_grid)
+    # print(grid.request_grid)
     ##### match trips
     matching_info =  matching(
         u=grid.request_grid[:],
@@ -142,8 +142,8 @@ while(curr_time<4):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.d
     
     
     
-    print("zonal rev:", grid.zonal_profit)
-    print(f'Avg Stay Duration : {avg_stay_time}')
+    # print("zonal rev:", grid.zonal_profit)
+    # print(f'Avg Stay Duration : {avg_stay_time}')
     #print("############# Vehicles \n")
     # for v in all_vehicles:
     #     print(v)
