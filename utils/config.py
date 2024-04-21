@@ -28,6 +28,9 @@ class HyperParams():
     beta2 = .1 # Per time revenue of drivers
     mu1 = 10 # Base Income revenue of platform
     mu2 = 1 # Base Income revenue of drivers
+    alpha3 = 1 # Penalty per unit distance when idling 
+    beta3 = 2 # Penalty per unit time when idling 
+
     
 class MainParmas():
     generate_new_trips = True

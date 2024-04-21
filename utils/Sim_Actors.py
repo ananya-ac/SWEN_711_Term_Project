@@ -1,5 +1,6 @@
 import uuid
 import numpy as np
+import pdb
 from utils.config import HyperParams as h
 class Car:
     """
@@ -62,8 +63,12 @@ class Car:
         if not should_relocate:
             return -1, relocation_willingness 
         else:
-            transition_prob = transition_matrix[self.loc]
+            transition_prob = transition_matrix[self.loc][:]
             num_dims = len(transition_prob)
+            if (transition_prob<0).sum() > 0:
+                transition_prob = np.exp(transition_prob)/np.exp(transition_prob).sum()
+                transition_prob = transition_prob.astype('float32')
+            
             transition_state = np.random.choice(list(range(num_dims)), 1,
                                                 p=transition_prob)
         

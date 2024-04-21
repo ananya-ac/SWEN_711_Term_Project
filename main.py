@@ -41,7 +41,8 @@ if is_gen:
 trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
 
 
-while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
+while(curr_time<4):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
+    
     
 
     if curr_time>3:
@@ -50,7 +51,9 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
         curr_time<cfg.num_trip_gen_rounds*3+1) and cfg.generate_new_trips:
         #print(f'Generating New Trips @ Curr time == {curr_time}!!')
         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
-    
+    print("Before Matching")
+    print(grid.vehicle_grid)
+    print(grid.request_grid)
     ##### match trips
     matching_info =  matching(
         u=grid.request_grid[:],
@@ -91,9 +94,12 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
     
     grid.update_transition_matrix()
     
+    print('after matching')
+    print(grid.vehicle_grid)
+    print(grid.request_grid)
     for veh in all_vehicles:
-        if veh.idle:
-            veh.idle_time_increase()
+        if veh.idle: #There is a problem here. When a vehicle makes a drop at this timestep, 
+            veh.idle_time_increase() #it is marked as idle and it contributes to negative reward.
             grid.idle_time_per_zone_increase(veh.get_location())
             if veh.get_idle_time() == 1:
                 grid.idle_car_per_zone_increase(veh.get_location())
@@ -101,24 +107,28 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
             relocation_state, confidence = veh.relocate_to(grid.get_lambda()[veh.loc], 
                             grid.vehicle_transition_matrix)
             
-            
-            if relocation_state!=-1:
-                print(f"Veh :{veh.id} Curr_loc : {veh.loc} Reloc Confidence : {confidence} State = {relocation_state}")
+            if relocation_state == -1:
+                grid.idle_no_reposition_loss(veh.loc) 
+            else:
+                #print(f"Veh :{veh.id} Curr_loc : {veh.loc} Reloc Confidence : {confidence} State = {relocation_state}")
                 reloc_trip = Trip(curr_time, 
                             veh.loc,
                             relocation_state,
                             DIST_MATRIX[veh.loc][relocation_state],
                             TRAVEL_TIME_MATRIX[veh.loc][relocation_state],
-                            pickup_time=curr_time + math.ceil(
+                            pickup_time = curr_time + math.ceil(
                                 TRAVEL_TIME_MATRIX[veh.loc][relocation_state]))
                 reloc_trip.assigned = 2
                 reloc_trip.vehicle = veh.id
-                print(f"New Relocation trip created : {reloc_trip}")
+                #print(f"New Relocation trip created : {reloc_trip}")
                 trip_tracker.assigned.append(reloc_trip)
                 grid.vehicle_grid[veh.loc][relocation_state]+=1
                 grid.vehicle_grid[veh.loc][veh.loc]-=1
-                veh_index = all_vehicles.index(veh)
-                all_vehicles[veh_index].idle = False
+                veh.idle = False
+                grid.idle_reposition_loss(veh.loc, DIST_MATRIX[veh.loc][relocation_state], 
+                                          TRAVEL_TIME_MATRIX[veh.loc][relocation_state])
+                # veh_index = all_vehicles.index(veh)
+                # all_vehicles[veh_index].idle = False
 
     try:
         a = grid.get_idle_time_per_zone()[:]
@@ -126,13 +136,15 @@ while  (curr_time<500):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_gr
         avg_stay_time = np.divide(a, b, out=np.zeros_like(a), where=b!=0)
         avg_stay_time = np.nan_to_num(avg_stay_time)
     except RuntimeWarning:
-        pdb.set_trace()
-
+        print("check for 0/0")
+    
     curr_time+=1
     
-    # print(grid.vehicle_grid)
+    
+    
+    print("zonal rev:", grid.zonal_profit)
     print(f'Avg Stay Duration : {avg_stay_time}')
-    # print("############# Vehicles \n")
+    #print("############# Vehicles \n")
     # for v in all_vehicles:
     #     print(v)
     # print("############# Round Ends\nRequests:\n",grid.request_grid, 

@@ -5,6 +5,7 @@ from .config import Trip as trip_conf
 from .config import Simulation as sim_conf
 from .Sim_Actors import Trip, Car
 import utils.config as cfg
+from utils.config import HyperParams as h
 import pdb
 
 # model defs
@@ -93,9 +94,11 @@ class Grid:
         self.total_idle_stay_time[zone] += 1
 
     def get_lambda(self):
-        avg_stay_duration = self.get_idle_time_per_zone() / self.get_idle_vehicle_per_zone()
-        avg_stay_duration = np.nan_to_num(avg_stay_duration)
-        return np.reciprocal(avg_stay_duration)
+        a = self.get_idle_time_per_zone()[:]
+        b = self.get_idle_vehicle_per_zone()[:]
+        avg_stay_time = np.divide(a, b, out=np.zeros_like(a), where=b!=0)
+        avg_stay_time = np.nan_to_num(avg_stay_time)
+        return np.reciprocal(avg_stay_time, out=np.zeros_like(a), where=b!=0)
     
     def update_transition_matrix(self):
         dist_mat = cfg.DIST_MATRIX
@@ -105,10 +108,18 @@ class Grid:
                 if i==j:
                     self.vehicle_transition_matrix[i][j] = 0
                 else:
-                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/dist_mat[i][j]
+                    self.vehicle_transition_matrix[i][j] = self.zonal_profit[j]/dist_mat[i][j] 
                     total_prof_per_dist += self.zonal_profit[j]/dist_mat[i][j]
-            self.vehicle_transition_matrix[i] /= total_prof_per_dist
             
+            self.vehicle_transition_matrix[i] = np.divide(self.vehicle_transition_matrix[i], total_prof_per_dist, 
+                                                          out=np.zeros_like(self.vehicle_transition_matrix[i]), 
+                                                          where=total_prof_per_dist!=0)
+            
+    def idle_no_reposition_loss(self,loc):
+        self.zonal_profit[loc] -= h.beta3
+
+    def idle_reposition_loss(self,loc, dist, time):
+        self.zonal_profit[loc] -= (h.beta3 * time + h.alpha3 * dist)    
                     
    
 class TripTracker(): 
