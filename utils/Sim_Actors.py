@@ -68,9 +68,13 @@ class Car:
             if (transition_prob<0).sum() > 0:
                 transition_prob = np.exp(transition_prob)/np.exp(transition_prob).sum()
                 transition_prob = transition_prob.astype('float32')
-            
-            transition_state = np.random.choice(list(range(num_dims)), 1,
-                                                p=transition_prob)
+                if np.sum(transition_prob)!=1:
+                    raise Exception(f'Sum of prob not 1 : {transition_prob}')
+            else:
+                prob = 1/num_dims
+                transition_prob = [prob for i in range(num_dims)]
+                transition_state = np.random.choice(list(range(num_dims)), 1,
+                                                    p=transition_prob)
         
         return transition_state[0], relocation_willingness
 class Trip:

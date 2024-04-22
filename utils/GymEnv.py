@@ -12,23 +12,24 @@ import math
 
 class RideGrid(Env):
 
-  def __init__(self, grid):
+  def __init__(self):
 
     self.done = False
-    self.grid = grid
-    self.action_space = Box(low = np.ones(shape = (self.grid.dim)) * 0.5, high = np.ones(shape = (self.grid.dim)) * 2.0)
-    spaces = {"vehicle_grid": Box(low = np.zeros(shape = (self.grid.dim,self.grid.dim)), high = np.ones(shape = (self.grid.dim,grid.dim)) * 4),
-              "request_grid": Box(low = np.zeros(shape = (self.grid.dim,self.grid.dim)), high = np.ones(shape = (self.grid.dim,grid.dim)) * 4),
-              "zonal_revenue": Box(low = np.zeros(shape = self.grid.dim), high = np.ones(shape = self.grid.dim) * 100000000),
-              "zonal_idle_time" : Box(low = np.zeros(shape = self.grid.dim), high = np.ones(shape = self.grid.dim) * 100000)}
+    self.action_space = Box(low = np.ones(shape = (4)) * 0.5, high = np.ones(shape = (4)) * 2.0)
+    spaces = {"vehicle_grid": Box(low = np.zeros(shape = (4,4)), high = np.ones(shape = (4,4)) * 4),
+              "request_grid": Box(low = np.zeros(shape = (4,4)), high = np.ones(shape = (4,4)) * 4),
+              "zonal_revenue": Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000000),
+              "zonal_idle_time" : Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000)}
     self.observation_space = Dict(spaces)
+    self.trip_tracker = None
+    self.all_vehicles = None
 
   def step(self, action):
 
     
     if self.curr_time > 3:
         self.grid.request_grid = self.trip_tracker.pop_expired_trips(self.curr_time, self.grid.request_grid)
-    if self.curr_time % 3 == 0 and self.curr_time > 1 and self.curr_time < 10:
+    if self.curr_time % 3 == 0  and self.curr_time < 10:
         print(f'Generating New Trips @ Curr time == {self.curr_time}!!')
         self.trip_tracker.add_new_trips(self.grid.generate_trips(self.curr_time))
 
@@ -112,9 +113,9 @@ class RideGrid(Env):
     # REWARD
     reward = self.grid.zonal_profit.sum() 
     #Check Done
-    if self.curr_time == 10000:
+    if self.curr_time == 100:
       self.done = True
-
+    print(f'Episode : ? Time Step- {self.curr_time}')
     return observation, reward, self.done
 
   def reset(self):
@@ -131,7 +132,9 @@ class RideGrid(Env):
     self.trip_tracker = TripTracker(grid=self.grid)
 
     self.all_vehicles = []
-    self.grid.init_cars(self.all_vehicles)
+    veh, _ = self.grid.init_cars(self.all_vehicles)
+    self.all_vehicles.extend(veh)
+    print(all_vehicles)
     self.curr_time = 0
 
     return {'vehicle_grid' : self.grid.vehicle_grid,
