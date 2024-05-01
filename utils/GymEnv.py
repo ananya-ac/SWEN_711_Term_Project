@@ -1,18 +1,17 @@
-import gym
-from gym import Env,spaces
-from gym.spaces import Box,Dict
+import gymnasium as gym
+from gymnasium import Env
+from gymnasium.spaces import Box,Dict
 import numpy as np
 from utils.sim_world import Grid, TripTracker
-from utils import match
 from utils.Matching import matching
 from utils.Sim_Actors import Trip
 from utils.config import MainParmas as cfg
 from utils.config import DIST_MATRIX, TRAVEL_TIME_MATRIX
-import math
+import math, pickle
 
 class RideGrid(Env):
 
-  def __init__(self):
+  def __init__(self, saved_trips:str):
 
     self.done = False
     self.action_space = Box(low = np.ones(shape = (4)) * 0.5, high = np.ones(shape = (4)) * 2.0)
@@ -23,15 +22,35 @@ class RideGrid(Env):
     self.observation_space = Dict(spaces)
     self.trip_tracker = None
     self.all_vehicles = None
+    with open(saved_trips, "rb") as f:
+        self.trips = pickle.load(f)
+    
 
   def step(self, action):
 
-    
+    self.grid.px_i = action
     if self.curr_time > 3:
         self.grid.request_grid = self.trip_tracker.pop_expired_trips(self.curr_time, self.grid.request_grid)
-    if self.curr_time % 3 == 0  and self.curr_time < 10:
-        print(f'Generating New Trips @ Curr time == {self.curr_time}!!')
-        self.trip_tracker.add_new_trips(self.grid.generate_trips(self.curr_time))
+    # if self.curr_time % 3 == 0:  #and self.curr_time < 10:
+    #     print(f'Generating New Trips @ Curr time == {self.curr_time}!!')
+    if self.curr_time<950:
+        to_be_added = [t for t in self.trips if t.pickup_time == self.curr_time and t.source!=t.destination ]
+        for t in to_be_added:
+            self.trips.pop(self.trips.index(t))
+            # print(t)
+        for t in to_be_added:
+            self.grid.request_grid[t.source][t.destination] += 1
+        # print(f"new_trips_added = {len(to_be_added)}")
+        self.trip_tracker.add_new_trips(to_be_added)
+    # delete = []
+    # for tr in range(len(self.trip_tracker.assigned)):
+    #     if self.trip_tracker.assigned[tr].pickup_time < self.curr_time:
+    #         delete.append(self.trip_tracker.assigned[tr])
+    
+    
+        
+            
+
 
     ##### match trips
 
@@ -61,7 +80,7 @@ class RideGrid(Env):
     # for i in trip_tracker.assigned:
     #     print(i)
 
-
+    count_repos = 0
     for veh in self.all_vehicles:
         if veh.idle: #There is a problem here. When a vehicle makes a drop at this timestep, 
             veh.idle_time_increase() #it is marked as idle and it contributes to negative reward.
@@ -92,6 +111,7 @@ class RideGrid(Env):
                 veh.idle = False
                 self.grid.idle_reposition_loss(veh.loc, DIST_MATRIX[veh.loc][relocation_state], 
                                           TRAVEL_TIME_MATRIX[veh.loc][relocation_state])
+                count_repos+=1
                 # veh_index = all_vehicles.index(veh)
                 # all_vehicles[veh_index].idle = False
 
@@ -109,16 +129,29 @@ class RideGrid(Env):
                   'zonal_revenue' : self.grid.zonal_profit,
                   'zonal_idle_time' : avg_stay_time}
 
-    self.curr_time+=1
+    
     # REWARD
     reward = self.grid.zonal_profit.sum() 
     #Check Done
-    if self.curr_time == 100:
+    if self.curr_time == 1000:
       self.done = True
-    print(f'Episode : ? Time Step- {self.curr_time}')
-    return observation, reward, self.done
+    print('Step-{0} Price Mult avg -{1:.2f} Repositioned Vehicles -{2} REWARD - {3}'.format(
+        self.curr_time,
+        float(np.sum(self.grid.px_i)/self.grid.px_i.shape[0]), count_repos, reward))
+    # print(f'Reward- {reward}')
+    # print(len(self.trip_tracker.assigned))
+    # for i in self.trip_tracker.assigned:
+    #     print(i)
+    # print('\n')
+    # for i in self.trip_tracker.unassigned:
+    #     print(i)
+    # print(len(self.trip_tracker.unassigned))
+    # print(action)
+    # print(self.grid.request_grid)
+    self.curr_time+=1
+    return observation, reward, self.done, False, {}
 
-  def reset(self):
+  def reset(self, seed = None):
 
     all_vehicles = []
     curr_time = 0
@@ -130,15 +163,14 @@ class RideGrid(Env):
                max_wait_time = 5)
 
     self.trip_tracker = TripTracker(grid=self.grid)
-
+    self.grid.zonal_profit = np.ones(shape=self.grid.dim)
     self.all_vehicles = []
+    self.done = False
     veh, _ = self.grid.init_cars(self.all_vehicles)
     self.all_vehicles.extend(veh)
-    print(all_vehicles)
     self.curr_time = 0
 
-    return {'vehicle_grid' : self.grid.vehicle_grid,
+    return ({'vehicle_grid' : self.grid.vehicle_grid,
             'request_grid' : np.zeros(shape = (self.grid.dim, self.grid.dim)),
             'zonal_revenue' : np.zeros(shape = self.grid.dim),
-            'zonal_idle_time' : np.zeros(shape = self.grid.dim)}
-
+            'zonal_idle_time' : np.zeros(shape = self.grid.dim)}, {})

@@ -182,8 +182,8 @@ class TripTracker():
                 #print(f'1. Adding to {(j,k)}')
                 vehicle.loc = j
                 trip.pickup_time = curr_time + cfg.TRAVEL_TIME_MATRIX[j][k]
-                if trip.pickup_time > 600:
-                    pdb.set_trace()
+                # if trip.pickup_time > 600:
+                #     pdb.set_trace()
                 #print(f"Trip({trip.id}) status changed: \n\t\tStatus: Passenger Pickup Up\n\t\tVeh Loc:{j}\n\t\tDrop Time:{trip.pickup_time}\n\t\tDrop Loc : {j}")
             elif trip.pickup_time>curr_time and trip.assigned ==2:
                 #print(0.1,trip)
@@ -252,14 +252,14 @@ class TripTracker():
                     if vehicle_loc != pickup_loc:
                         vehicle_grid[vehicle_loc][pickup_loc] += 1
                         trip.pickup_time = curr_time + cfg.TRAVEL_TIME_MATRIX[vehicle_loc][pickup_loc]
-                        if trip.pickup_time>600:
-                            pdb.set_Trace()
+                        # if trip.pickup_time>600:
+                        #     pdb.set_Trace()
                         trip.assigned = 1
                     else: 
                         vehicle_grid[vehicle_loc][dest] += 1
                         trip.pickup_time = curr_time + cfg.TRAVEL_TIME_MATRIX[vehicle_loc][dest]
-                        if trip.pickup_time > 600:
-                            pdb.set_trace()
+                        # if trip.pickup_time > 600:
+                        #     pdb.set_trace()
                         trip.assigned = 2
                         request_grid[pickup_loc][dest] -= 1
                         self.grid.zonal_profit[trip.source] += trip.cal_amount()

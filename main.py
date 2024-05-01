@@ -5,7 +5,7 @@ from utils.Matching import matching
 from utils.Sim_Actors import Trip
 from utils.config import MainParmas as cfg
 from utils.config import DIST_MATRIX, TRAVEL_TIME_MATRIX
-import math
+import pickle
 
 # We need to 
 # - Track time based grids
@@ -41,16 +41,19 @@ if is_gen:
 trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enqueue
 
 
-# while(curr_time<4):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
+while(curr_time<1000):#(np.sum(grid.request_grid)>0) or (np.sum(grid.vehicle_grid.diagonal())!=num_cars)) :
     
     
+    curr_time+=1
+    # if curr_time>3:
+    #     grid.request_grid = trip_tracker.pop_expired_trips(curr_time, grid.request_grid)
+    if (curr_time%5 == 0 ):
+        #print(f'Generating New Trips @ Curr time == {curr_time}!!')
+        trip_tracker.add_new_trips(grid.generate_trips(curr_time))
+print('Trips' ,len(trip_tracker.unassigned))
+with open("data/saved_trips.pkl", "wb") as f:
+    pickle.dump(trip_tracker.unassigned, f)
 
-#     if curr_time>3:
-#         grid.request_grid = trip_tracker.pop_expired_trips(curr_time, grid.request_grid)
-#     if (curr_time%3 == 0 and curr_time>1) and (
-#         curr_time<cfg.num_trip_gen_rounds*3+1) and cfg.generate_new_trips:
-#         #print(f'Generating New Trips @ Curr time == {curr_time}!!')
-#         trip_tracker.add_new_trips(grid.generate_trips(curr_time))
 #     # print("Before Matching")
 #     # print(grid.vehicle_grid)
 #     # print(grid.request_grid)
@@ -151,12 +154,12 @@ trip_tracker.add_new_trips(grid.generate_trips(curr_time))# works like queue enq
 #     #       '\nVehicles:\n',grid.vehicle_grid)
     
 
-from utils.GymEnv import RideGrid
+# from utils.GymEnv import RideGrid
 
 
-systum = RideGrid()
-systum.reset()
-while(not systum.done):
-    systum.step(None)
+# systum = RideGrid()
+# systum.reset()
+# while(not systum.done):
+#     systum.step(None)
 
-print(systum.done)
+# print(systum.done)
