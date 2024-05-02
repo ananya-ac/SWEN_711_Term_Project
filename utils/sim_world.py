@@ -1,6 +1,6 @@
 import numpy as np
 import math
-from typing import List, Dict, Any
+
 from .config import Trip as trip_conf
 from .config import Simulation as sim_conf
 from .Sim_Actors import Trip, Car
@@ -215,7 +215,7 @@ class TripTracker():
         for t in to_pop:
             self.completed.append(self.assigned.pop(self.assigned.index(t)))
         
-    def assign_trips_new(self,curr_time:int, matching_info,all_vehicles:list[Car] ,request_grid, vehicle_grid):
+    def assign_trips_new(self,curr_time:int, matching_info,all_vehicles ,request_grid, vehicle_grid):
             
             
             for matches in matching_info:

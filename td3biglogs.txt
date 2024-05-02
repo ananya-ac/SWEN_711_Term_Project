@@ -1,0 +1,4718 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+episodic reward: 32036.79999999981
+episodic reward: 32933.29999999977
+episodic reward: 31685.899999999812
+episodic reward: 32414.199999999793
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.62e+07  |
+| time/              |           |
+|    episodes        | 4         |
+|    fps             | 168       |
+|    time_elapsed    | 23        |
+|    total_timesteps | 4004      |
+| train/             |           |
+|    actor_loss      | -3.78e+04 |
+|    critic_loss     | 2.62e+05  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 3903      |
+----------------------------------
+episodic reward: 32001.19999999982
+episodic reward: 33077.19999999978
+episodic reward: 32577.299999999803
+episodic reward: 32888.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 8         |
+|    fps             | 172       |
+|    time_elapsed    | 46        |
+|    total_timesteps | 8008      |
+| train/             |           |
+|    actor_loss      | -6.51e+04 |
+|    critic_loss     | 2.85e+05  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 7907      |
+----------------------------------
+episodic reward: 32001.199999999808
+episodic reward: 32906.29999999977
+episodic reward: 33413.69999999976
+episodic reward: 31498.4999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 12        |
+|    fps             | 172       |
+|    time_elapsed    | 69        |
+|    total_timesteps | 12012     |
+| train/             |           |
+|    actor_loss      | -9.05e+04 |
+|    critic_loss     | 2.7e+06   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 11911     |
+----------------------------------
+episodic reward: 32705.79999999978
+episodic reward: 31730.499999999818
+episodic reward: 33796.29999999978
+episodic reward: 33148.49999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 16        |
+|    fps             | 170       |
+|    time_elapsed    | 93        |
+|    total_timesteps | 16016     |
+| train/             |           |
+|    actor_loss      | -1.11e+05 |
+|    critic_loss     | 7.11e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 15915     |
+----------------------------------
+episodic reward: 32766.599999999788
+episodic reward: 32488.999999999767
+episodic reward: 33554.899999999776
+episodic reward: 31743.69999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 20        |
+|    fps             | 169       |
+|    time_elapsed    | 117       |
+|    total_timesteps | 20020     |
+| train/             |           |
+|    actor_loss      | -1.54e+05 |
+|    critic_loss     | 4e+06     |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 19919     |
+----------------------------------
+episodic reward: 33945.99999999977
+episodic reward: 31893.599999999795
+episodic reward: 32375.6999999998
+episodic reward: 33005.899999999776
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 24        |
+|    fps             | 169       |
+|    time_elapsed    | 141       |
+|    total_timesteps | 24024     |
+| train/             |           |
+|    actor_loss      | -1.79e+05 |
+|    critic_loss     | 1.33e+06  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 23923     |
+----------------------------------
+episodic reward: 32348.599999999777
+episodic reward: 32954.39999999978
+episodic reward: 32906.199999999815
+episodic reward: 32537.99999999979
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 28       |
+|    fps             | 169      |
+|    time_elapsed    | 165      |
+|    total_timesteps | 28028    |
+| train/             |          |
+|    actor_loss      | -2.2e+05 |
+|    critic_loss     | 3.27e+06 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 27927    |
+---------------------------------
+episodic reward: 33294.49999999976
+episodic reward: 32450.599999999806
+episodic reward: 32868.899999999776
+episodic reward: 31866.299999999796
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 32        |
+|    fps             | 169       |
+|    time_elapsed    | 188       |
+|    total_timesteps | 32032     |
+| train/             |           |
+|    actor_loss      | -2.24e+05 |
+|    critic_loss     | 2.52e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 31931     |
+----------------------------------
+episodic reward: 33262.999999999774
+episodic reward: 32147.299999999777
+episodic reward: 33557.99999999977
+episodic reward: 32174.09999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 36        |
+|    fps             | 169       |
+|    time_elapsed    | 212       |
+|    total_timesteps | 36036     |
+| train/             |           |
+|    actor_loss      | -2.51e+05 |
+|    critic_loss     | 1.31e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 35935     |
+----------------------------------
+episodic reward: 32544.8999999998
+episodic reward: 33892.699999999786
+episodic reward: 32797.69999999981
+episodic reward: 32268.09999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 40        |
+|    fps             | 169       |
+|    time_elapsed    | 236       |
+|    total_timesteps | 40040     |
+| train/             |           |
+|    actor_loss      | -2.73e+05 |
+|    critic_loss     | 2.12e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 39939     |
+----------------------------------
+episodic reward: 33393.99999999979
+episodic reward: 32864.59999999979
+episodic reward: 33882.39999999976
+episodic reward: 32420.899999999805
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 44        |
+|    fps             | 168       |
+|    time_elapsed    | 261       |
+|    total_timesteps | 44044     |
+| train/             |           |
+|    actor_loss      | -3.19e+05 |
+|    critic_loss     | 3.23e+06  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 43943     |
+----------------------------------
+episodic reward: 33318.19999999979
+episodic reward: 32582.19999999978
+episodic reward: 32932.49999999979
+episodic reward: 32190.09999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 48        |
+|    fps             | 168       |
+|    time_elapsed    | 285       |
+|    total_timesteps | 48048     |
+| train/             |           |
+|    actor_loss      | -3.41e+05 |
+|    critic_loss     | 3e+09     |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 47947     |
+----------------------------------
+episodic reward: 33838.99999999977
+episodic reward: 32681.49999999976
+episodic reward: 32498.899999999798
+episodic reward: 32381.599999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 52        |
+|    fps             | 168       |
+|    time_elapsed    | 308       |
+|    total_timesteps | 52052     |
+| train/             |           |
+|    actor_loss      | -3.64e+05 |
+|    critic_loss     | 7.2e+06   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 51951     |
+----------------------------------
+episodic reward: 32170.099999999802
+episodic reward: 33218.79999999979
+episodic reward: 32588.899999999783
+episodic reward: 32186.69999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 56        |
+|    fps             | 168       |
+|    time_elapsed    | 332       |
+|    total_timesteps | 56056     |
+| train/             |           |
+|    actor_loss      | -3.63e+05 |
+|    critic_loss     | 2.31e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 55955     |
+----------------------------------
+episodic reward: 31988.699999999786
+episodic reward: 33052.89999999979
+episodic reward: 32255.199999999808
+episodic reward: 33409.0999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 60        |
+|    fps             | 168       |
+|    time_elapsed    | 357       |
+|    total_timesteps | 60060     |
+| train/             |           |
+|    actor_loss      | -4.29e+05 |
+|    critic_loss     | 7.37e+06  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 59959     |
+----------------------------------
+episodic reward: 32611.09999999976
+episodic reward: 34038.29999999977
+episodic reward: 32179.699999999804
+episodic reward: 33280.79999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 64        |
+|    fps             | 168       |
+|    time_elapsed    | 381       |
+|    total_timesteps | 64064     |
+| train/             |           |
+|    actor_loss      | -4.11e+05 |
+|    critic_loss     | 1.07e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 63963     |
+----------------------------------
+episodic reward: 32493.19999999978
+episodic reward: 32447.79999999981
+episodic reward: 32751.299999999785
+episodic reward: 31416.599999999824
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 68        |
+|    fps             | 168       |
+|    time_elapsed    | 405       |
+|    total_timesteps | 68068     |
+| train/             |           |
+|    actor_loss      | -4.17e+05 |
+|    critic_loss     | 9.53e+06  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 67967     |
+----------------------------------
+episodic reward: 32105.699999999768
+episodic reward: 32987.69999999979
+episodic reward: 32964.19999999978
+episodic reward: 32408.699999999808
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 72        |
+|    fps             | 168       |
+|    time_elapsed    | 428       |
+|    total_timesteps | 72072     |
+| train/             |           |
+|    actor_loss      | -4.85e+05 |
+|    critic_loss     | 7.68e+06  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 71971     |
+----------------------------------
+episodic reward: 32145.79999999979
+episodic reward: 32238.49999999979
+episodic reward: 33090.29999999977
+episodic reward: 32959.3999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 76        |
+|    fps             | 168       |
+|    time_elapsed    | 452       |
+|    total_timesteps | 76076     |
+| train/             |           |
+|    actor_loss      | -5.01e+05 |
+|    critic_loss     | 1.59e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 75975     |
+----------------------------------
+episodic reward: 32228.0999999998
+episodic reward: 32663.499999999807
+episodic reward: 32101.399999999783
+episodic reward: 32474.89999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 80        |
+|    fps             | 168       |
+|    time_elapsed    | 475       |
+|    total_timesteps | 80080     |
+| train/             |           |
+|    actor_loss      | -5.25e+05 |
+|    critic_loss     | 6.74e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 79979     |
+----------------------------------
+episodic reward: 32656.3999999998
+episodic reward: 33454.99999999977
+episodic reward: 33303.19999999977
+episodic reward: 33516.99999999978
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 84       |
+|    fps             | 167      |
+|    time_elapsed    | 502      |
+|    total_timesteps | 84084    |
+| train/             |          |
+|    actor_loss      | -5.3e+05 |
+|    critic_loss     | 4.33e+07 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 83983    |
+---------------------------------
+episodic reward: 31997.999999999793
+episodic reward: 33368.09999999977
+episodic reward: 33309.799999999785
+episodic reward: 33983.29999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 88        |
+|    fps             | 166       |
+|    time_elapsed    | 529       |
+|    total_timesteps | 88088     |
+| train/             |           |
+|    actor_loss      | -5.11e+05 |
+|    critic_loss     | 1.61e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 87987     |
+----------------------------------
+episodic reward: 33035.29999999979
+episodic reward: 31996.099999999795
+episodic reward: 32706.399999999765
+episodic reward: 32476.899999999776
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 92        |
+|    fps             | 165       |
+|    time_elapsed    | 555       |
+|    total_timesteps | 92092     |
+| train/             |           |
+|    actor_loss      | -5.75e+05 |
+|    critic_loss     | 1.9e+07   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 91991     |
+----------------------------------
+episodic reward: 32996.099999999795
+episodic reward: 33036.6999999998
+episodic reward: 33594.79999999978
+episodic reward: 32694.399999999787
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 96        |
+|    fps             | 165       |
+|    time_elapsed    | 581       |
+|    total_timesteps | 96096     |
+| train/             |           |
+|    actor_loss      | -5.96e+05 |
+|    critic_loss     | 1.71e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 95995     |
+----------------------------------
+episodic reward: 31680.1999999998
+episodic reward: 33152.79999999976
+episodic reward: 33335.49999999978
+episodic reward: 32537.099999999773
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 100       |
+|    fps             | 164       |
+|    time_elapsed    | 608       |
+|    total_timesteps | 100100    |
+| train/             |           |
+|    actor_loss      | -5.92e+05 |
+|    critic_loss     | 8.87e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 99999     |
+----------------------------------
+episodic reward: 33049.69999999979
+episodic reward: 32307.799999999785
+episodic reward: 33550.099999999795
+episodic reward: 32727.0999999998
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 104      |
+|    fps             | 163      |
+|    time_elapsed    | 635      |
+|    total_timesteps | 104104   |
+| train/             |          |
+|    actor_loss      | -5.9e+05 |
+|    critic_loss     | 7.15e+07 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 104003   |
+---------------------------------
+episodic reward: 32527.199999999797
+episodic reward: 32957.699999999786
+episodic reward: 33135.199999999786
+episodic reward: 33196.89999999976
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 108       |
+|    fps             | 163       |
+|    time_elapsed    | 662       |
+|    total_timesteps | 108108    |
+| train/             |           |
+|    actor_loss      | -6.36e+05 |
+|    critic_loss     | 4.7e+07   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 108007    |
+----------------------------------
+episodic reward: 32097.299999999792
+episodic reward: 32039.6999999998
+episodic reward: 32219.199999999804
+episodic reward: 32104.699999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 112       |
+|    fps             | 162       |
+|    time_elapsed    | 688       |
+|    total_timesteps | 112112    |
+| train/             |           |
+|    actor_loss      | -6.41e+05 |
+|    critic_loss     | 2.95e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 112011    |
+----------------------------------
+episodic reward: 32153.89999999979
+episodic reward: 31861.7999999998
+episodic reward: 32790.6999999998
+episodic reward: 32652.499999999764
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 116       |
+|    fps             | 162       |
+|    time_elapsed    | 715       |
+|    total_timesteps | 116116    |
+| train/             |           |
+|    actor_loss      | -6.99e+05 |
+|    critic_loss     | 1.13e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 116015    |
+----------------------------------
+episodic reward: 33030.59999999978
+episodic reward: 31805.099999999817
+episodic reward: 31740.69999999981
+episodic reward: 31329.599999999842
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 120      |
+|    fps             | 161      |
+|    time_elapsed    | 743      |
+|    total_timesteps | 120120   |
+| train/             |          |
+|    actor_loss      | -6.7e+05 |
+|    critic_loss     | 1.21e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 120019   |
+---------------------------------
+episodic reward: 31686.39999999979
+episodic reward: 32260.299999999785
+episodic reward: 32931.49999999978
+episodic reward: 33301.699999999786
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 124      |
+|    fps             | 161      |
+|    time_elapsed    | 769      |
+|    total_timesteps | 124124   |
+| train/             |          |
+|    actor_loss      | -7.2e+05 |
+|    critic_loss     | 1.29e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 124023   |
+---------------------------------
+episodic reward: 33544.499999999774
+episodic reward: 33012.29999999979
+episodic reward: 32532.199999999786
+episodic reward: 33484.29999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 128       |
+|    fps             | 160       |
+|    time_elapsed    | 796       |
+|    total_timesteps | 128128    |
+| train/             |           |
+|    actor_loss      | -7.34e+05 |
+|    critic_loss     | 2.75e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 128027    |
+----------------------------------
+episodic reward: 32445.499999999767
+episodic reward: 33300.299999999785
+episodic reward: 31280.899999999805
+episodic reward: 32259.39999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 132       |
+|    fps             | 160       |
+|    time_elapsed    | 822       |
+|    total_timesteps | 132132    |
+| train/             |           |
+|    actor_loss      | -7.56e+05 |
+|    critic_loss     | 7.52e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 132031    |
+----------------------------------
+episodic reward: 33010.999999999796
+episodic reward: 32239.899999999805
+episodic reward: 32086.199999999826
+episodic reward: 31794.299999999785
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 136       |
+|    fps             | 160       |
+|    time_elapsed    | 848       |
+|    total_timesteps | 136136    |
+| train/             |           |
+|    actor_loss      | -7.62e+05 |
+|    critic_loss     | 4.51e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 136035    |
+----------------------------------
+episodic reward: 31954.79999999981
+episodic reward: 31729.599999999813
+episodic reward: 31279.59999999983
+episodic reward: 33143.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 140       |
+|    fps             | 160       |
+|    time_elapsed    | 874       |
+|    total_timesteps | 140140    |
+| train/             |           |
+|    actor_loss      | -7.62e+05 |
+|    critic_loss     | 1.82e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 140039    |
+----------------------------------
+episodic reward: 32915.99999999978
+episodic reward: 32299.49999999979
+episodic reward: 32092.79999999979
+episodic reward: 32606.099999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 144       |
+|    fps             | 160       |
+|    time_elapsed    | 900       |
+|    total_timesteps | 144144    |
+| train/             |           |
+|    actor_loss      | -7.67e+05 |
+|    critic_loss     | 8.65e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 144043    |
+----------------------------------
+episodic reward: 33702.599999999766
+episodic reward: 32939.799999999785
+episodic reward: 32909.29999999978
+episodic reward: 32906.49999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 148       |
+|    fps             | 159       |
+|    time_elapsed    | 927       |
+|    total_timesteps | 148148    |
+| train/             |           |
+|    actor_loss      | -7.79e+05 |
+|    critic_loss     | 1.16e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 148047    |
+----------------------------------
+episodic reward: 32645.299999999785
+episodic reward: 32349.899999999794
+episodic reward: 32309.99999999978
+episodic reward: 33314.69999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 152       |
+|    fps             | 159       |
+|    time_elapsed    | 955       |
+|    total_timesteps | 152152    |
+| train/             |           |
+|    actor_loss      | -7.92e+05 |
+|    critic_loss     | 3.19e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 152051    |
+----------------------------------
+episodic reward: 31986.599999999806
+episodic reward: 33370.1999999998
+episodic reward: 32475.09999999979
+episodic reward: 33027.39999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 156       |
+|    fps             | 158       |
+|    time_elapsed    | 982       |
+|    total_timesteps | 156156    |
+| train/             |           |
+|    actor_loss      | -8.19e+05 |
+|    critic_loss     | 6.23e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 156055    |
+----------------------------------
+episodic reward: 31850.799999999817
+episodic reward: 32516.7999999998
+episodic reward: 31943.79999999978
+episodic reward: 32945.69999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 160       |
+|    fps             | 158       |
+|    time_elapsed    | 1010      |
+|    total_timesteps | 160160    |
+| train/             |           |
+|    actor_loss      | -8.75e+05 |
+|    critic_loss     | 1.67e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 160059    |
+----------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            episodic reward: 31627.699999999815
+episodic reward: 32459.09999999981
+episodic reward: 33349.09999999977
+episodic reward: 33088.499999999774
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 168       |
+|    fps             | 158       |
+|    time_elapsed    | 1063      |
+|    total_timesteps | 168168    |
+| train/             |           |
+|    actor_loss      | -8.44e+05 |
+|    critic_loss     | 1.02e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 168067    |
+----------------------------------
+episodic reward: 32398.199999999808
+episodic reward: 32687.099999999777
+episodic reward: 32181.699999999797
+episodic reward: 33247.2999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 172       |
+|    fps             | 157       |
+|    time_elapsed    | 1090      |
+|    total_timesteps | 172172    |
+| train/             |           |
+|    actor_loss      | -8.46e+05 |
+|    critic_loss     | 6.95e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 172071    |
+----------------------------------
+episodic reward: 31964.699999999797
+episodic reward: 33407.59999999977
+episodic reward: 32484.0999999998
+episodic reward: 32890.69999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 176       |
+|    fps             | 157       |
+|    time_elapsed    | 1117      |
+|    total_timesteps | 176176    |
+| train/             |           |
+|    actor_loss      | -8.94e+05 |
+|    critic_loss     | 5.93e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 176075    |
+----------------------------------
+episodic reward: 32102.79999999979
+episodic reward: 32578.399999999794
+episodic reward: 33387.89999999979
+episodic reward: 32245.199999999793
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 180       |
+|    fps             | 157       |
+|    time_elapsed    | 1144      |
+|    total_timesteps | 180180    |
+| train/             |           |
+|    actor_loss      | -8.48e+05 |
+|    critic_loss     | 1.73e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 180079    |
+----------------------------------
+episodic reward: 32214.999999999785
+episodic reward: 32275.799999999806
+episodic reward: 31774.999999999814
+episodic reward: 34235.2999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 184       |
+|    fps             | 157       |
+|    time_elapsed    | 1172      |
+|    total_timesteps | 184184    |
+| train/             |           |
+|    actor_loss      | -9.44e+05 |
+|    critic_loss     | 1.32e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 184083    |
+----------------------------------
+episodic reward: 33530.399999999776
+episodic reward: 32422.699999999808
+episodic reward: 33280.29999999976
+episodic reward: 31720.39999999982
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 188       |
+|    fps             | 156       |
+|    time_elapsed    | 1200      |
+|    total_timesteps | 188188    |
+| train/             |           |
+|    actor_loss      | -8.55e+05 |
+|    critic_loss     | 1.99e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 188087    |
+----------------------------------
+episodic reward: 32151.19999999979
+episodic reward: 32392.499999999793
+episodic reward: 32692.3999999998
+episodic reward: 32966.19999999975
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 192      |
+|    fps             | 156      |
+|    time_elapsed    | 1228     |
+|    total_timesteps | 192192   |
+| train/             |          |
+|    actor_loss      | -8.9e+05 |
+|    critic_loss     | 6.28e+07 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 192091   |
+---------------------------------
+episodic reward: 32505.699999999786
+episodic reward: 33011.09999999978
+episodic reward: 32789.099999999795
+episodic reward: 32696.899999999783
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 196       |
+|    fps             | 156       |
+|    time_elapsed    | 1256      |
+|    total_timesteps | 196196    |
+| train/             |           |
+|    actor_loss      | -9.47e+05 |
+|    critic_loss     | 2.01e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 196095    |
+----------------------------------
+episodic reward: 33056.39999999979
+episodic reward: 33141.899999999805
+episodic reward: 32659.099999999795
+episodic reward: 32779.799999999785
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 200       |
+|    fps             | 155       |
+|    time_elapsed    | 1284      |
+|    total_timesteps | 200200    |
+| train/             |           |
+|    actor_loss      | -9.66e+05 |
+|    critic_loss     | 1.98e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 200099    |
+----------------------------------
+episodic reward: 33639.09999999978
+episodic reward: 32187.7999999998
+episodic reward: 32154.599999999795
+episodic reward: 32595.799999999785
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 204       |
+|    fps             | 155       |
+|    time_elapsed    | 1312      |
+|    total_timesteps | 204204    |
+| train/             |           |
+|    actor_loss      | -8.89e+05 |
+|    critic_loss     | 5.57e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 204103    |
+----------------------------------
+episodic reward: 33100.49999999978
+episodic reward: 32903.399999999805
+episodic reward: 34222.89999999976
+episodic reward: 32202.299999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 208       |
+|    fps             | 155       |
+|    time_elapsed    | 1341      |
+|    total_timesteps | 208208    |
+| train/             |           |
+|    actor_loss      | -8.85e+05 |
+|    critic_loss     | 1.4e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 208107    |
+----------------------------------
+episodic reward: 31633.49999999981
+episodic reward: 33903.69999999979
+episodic reward: 32964.89999999979
+episodic reward: 33204.29999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 212       |
+|    fps             | 154       |
+|    time_elapsed    | 1370      |
+|    total_timesteps | 212212    |
+| train/             |           |
+|    actor_loss      | -9.69e+05 |
+|    critic_loss     | 2.07e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 212111    |
+----------------------------------
+episodic reward: 32614.099999999762
+episodic reward: 32888.59999999977
+episodic reward: 32876.8999999998
+episodic reward: 32942.59999999979
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 216      |
+|    fps             | 154      |
+|    time_elapsed    | 1398     |
+|    total_timesteps | 216216   |
+| train/             |          |
+|    actor_loss      | -9.4e+05 |
+|    critic_loss     | 1.47e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 216115   |
+---------------------------------
+episodic reward: 33583.99999999979
+episodic reward: 32996.69999999978
+episodic reward: 31976.299999999796
+episodic reward: 33676.19999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 220       |
+|    fps             | 154       |
+|    time_elapsed    | 1426      |
+|    total_timesteps | 220220    |
+| train/             |           |
+|    actor_loss      | -9.14e+05 |
+|    critic_loss     | 7.25e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 220119    |
+----------------------------------
+episodic reward: 32695.5999999998
+episodic reward: 32468.799999999817
+episodic reward: 33109.399999999805
+episodic reward: 34393.29999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 224       |
+|    fps             | 154       |
+|    time_elapsed    | 1454      |
+|    total_timesteps | 224224    |
+| train/             |           |
+|    actor_loss      | -9.78e+05 |
+|    critic_loss     | 1.94e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 224123    |
+----------------------------------
+episodic reward: 32548.799999999803
+episodic reward: 32566.29999999979
+episodic reward: 32502.899999999805
+episodic reward: 31007.79999999983
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 228       |
+|    fps             | 153       |
+|    time_elapsed    | 1482      |
+|    total_timesteps | 228228    |
+| train/             |           |
+|    actor_loss      | -9.78e+05 |
+|    critic_loss     | 1.46e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 228127    |
+----------------------------------
+episodic reward: 33003.299999999785
+episodic reward: 32878.199999999786
+episodic reward: 33331.299999999785
+episodic reward: 31996.099999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 232       |
+|    fps             | 153       |
+|    time_elapsed    | 1511      |
+|    total_timesteps | 232232    |
+| train/             |           |
+|    actor_loss      | -9.64e+05 |
+|    critic_loss     | 1.38e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 232131    |
+----------------------------------
+episodic reward: 32651.099999999795
+episodic reward: 32481.899999999798
+episodic reward: 33536.39999999979
+episodic reward: 33356.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 236       |
+|    fps             | 153       |
+|    time_elapsed    | 1540      |
+|    total_timesteps | 236236    |
+| train/             |           |
+|    actor_loss      | -9.84e+05 |
+|    critic_loss     | 8.61e+07  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 236135    |
+----------------------------------
+episodic reward: 31925.699999999815
+episodic reward: 33551.99999999976
+episodic reward: 32158.299999999777
+episodic reward: 33005.19999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 240       |
+|    fps             | 153       |
+|    time_elapsed    | 1569      |
+|    total_timesteps | 240240    |
+| train/             |           |
+|    actor_loss      | -1.05e+06 |
+|    critic_loss     | 1.08e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 240139    |
+----------------------------------
+episodic reward: 32500.499999999807
+episodic reward: 32465.299999999792
+episodic reward: 32349.399999999772
+episodic reward: 33547.89999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 244       |
+|    fps             | 152       |
+|    time_elapsed    | 1597      |
+|    total_timesteps | 244244    |
+| train/             |           |
+|    actor_loss      | -9.66e+05 |
+|    critic_loss     | 4.79e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 244143    |
+----------------------------------
+episodic reward: 32895.299999999814
+episodic reward: 31965.69999999982
+episodic reward: 32091.699999999786
+episodic reward: 32676.599999999795
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 248       |
+|    fps             | 152       |
+|    time_elapsed    | 1625      |
+|    total_timesteps | 248248    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 2.09e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 248147    |
+----------------------------------
+episodic reward: 32651.199999999786
+episodic reward: 32369.39999999977
+episodic reward: 32318.89999999977
+episodic reward: 32644.999999999778
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 252       |
+|    fps             | 152       |
+|    time_elapsed    | 1652      |
+|    total_timesteps | 252252    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 1.13e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 252151    |
+----------------------------------
+episodic reward: 32293.3999999998
+episodic reward: 32226.399999999812
+episodic reward: 32233.899999999798
+episodic reward: 33463.59999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 256       |
+|    fps             | 152       |
+|    time_elapsed    | 1679      |
+|    total_timesteps | 256256    |
+| train/             |           |
+|    actor_loss      | -1.05e+06 |
+|    critic_loss     | 1.47e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 256155    |
+----------------------------------
+episodic reward: 32896.2999999998
+episodic reward: 32755.999999999796
+episodic reward: 32666.49999999978
+episodic reward: 32018.099999999795
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 260       |
+|    fps             | 152       |
+|    time_elapsed    | 1706      |
+|    total_timesteps | 260260    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.92e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 260159    |
+----------------------------------
+episodic reward: 33253.49999999978
+episodic reward: 33533.89999999978
+episodic reward: 32582.099999999788
+episodic reward: 33240.499999999796
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 264       |
+|    fps             | 152       |
+|    time_elapsed    | 1733      |
+|    total_timesteps | 264264    |
+| train/             |           |
+|    actor_loss      | -1.05e+06 |
+|    critic_loss     | 1.38e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 264163    |
+----------------------------------
+episodic reward: 32611.799999999796
+episodic reward: 31868.899999999798
+episodic reward: 32469.599999999795
+episodic reward: 34329.69999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 268       |
+|    fps             | 152       |
+|    time_elapsed    | 1759      |
+|    total_timesteps | 268268    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 2.03e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 268167    |
+----------------------------------
+episodic reward: 33157.0999999998
+episodic reward: 31968.89999999981
+episodic reward: 33501.399999999776
+episodic reward: 32936.4999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 272       |
+|    fps             | 152       |
+|    time_elapsed    | 1786      |
+|    total_timesteps | 272272    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.93e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 272171    |
+----------------------------------
+episodic reward: 32938.09999999979
+episodic reward: 31886.199999999786
+episodic reward: 32768.39999999978
+episodic reward: 32529.69999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 276       |
+|    fps             | 152       |
+|    time_elapsed    | 1814      |
+|    total_timesteps | 276276    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.29e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 276175    |
+----------------------------------
+episodic reward: 32719.999999999796
+episodic reward: 32862.69999999981
+episodic reward: 32823.09999999978
+episodic reward: 33343.99999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 280       |
+|    fps             | 152       |
+|    time_elapsed    | 1842      |
+|    total_timesteps | 280280    |
+| train/             |           |
+|    actor_loss      | -1.01e+06 |
+|    critic_loss     | 2.02e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 280179    |
+----------------------------------
+episodic reward: 33153.19999999977
+episodic reward: 31260.899999999816
+episodic reward: 33341.79999999977
+episodic reward: 32095.899999999794
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 284       |
+|    fps             | 152       |
+|    time_elapsed    | 1869      |
+|    total_timesteps | 284284    |
+| train/             |           |
+|    actor_loss      | -1.05e+06 |
+|    critic_loss     | 2.26e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 284183    |
+----------------------------------
+episodic reward: 32136.499999999796
+episodic reward: 32231.199999999782
+episodic reward: 32974.39999999978
+episodic reward: 32862.89999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 288       |
+|    fps             | 152       |
+|    time_elapsed    | 1896      |
+|    total_timesteps | 288288    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 2.03e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 288187    |
+----------------------------------
+episodic reward: 32896.89999999979
+episodic reward: 33027.89999999978
+episodic reward: 32488.1999999998
+episodic reward: 33808.399999999754
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 292       |
+|    fps             | 151       |
+|    time_elapsed    | 1923      |
+|    total_timesteps | 292292    |
+| train/             |           |
+|    actor_loss      | -1.07e+06 |
+|    critic_loss     | 2.19e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 292191    |
+----------------------------------
+episodic reward: 31723.7999999998
+episodic reward: 32655.099999999788
+episodic reward: 32715.599999999788
+episodic reward: 31595.599999999806
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 296      |
+|    fps             | 151      |
+|    time_elapsed    | 1951     |
+|    total_timesteps | 296296   |
+| train/             |          |
+|    actor_loss      | -1.1e+06 |
+|    critic_loss     | 2.29e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 296195   |
+---------------------------------
+episodic reward: 32012.79999999981
+episodic reward: 32452.199999999786
+episodic reward: 32212.799999999796
+episodic reward: 32773.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 300       |
+|    fps             | 151       |
+|    time_elapsed    | 1977      |
+|    total_timesteps | 300300    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 1.82e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 300199    |
+----------------------------------
+episodic reward: 32678.199999999775
+episodic reward: 31255.299999999817
+episodic reward: 32072.999999999814
+episodic reward: 32358.799999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 304       |
+|    fps             | 151       |
+|    time_elapsed    | 2005      |
+|    total_timesteps | 304304    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 1.75e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 304203    |
+----------------------------------
+episodic reward: 33787.09999999976
+episodic reward: 33147.59999999978
+episodic reward: 32825.599999999795
+episodic reward: 32514.399999999798
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 308       |
+|    fps             | 151       |
+|    time_elapsed    | 2031      |
+|    total_timesteps | 308308    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 3.57e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 308207    |
+----------------------------------
+episodic reward: 32790.29999999978
+episodic reward: 31623.199999999826
+episodic reward: 32476.599999999773
+episodic reward: 32866.59999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 312       |
+|    fps             | 151       |
+|    time_elapsed    | 2058      |
+|    total_timesteps | 312312    |
+| train/             |           |
+|    actor_loss      | -1.07e+06 |
+|    critic_loss     | 6.6e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 312211    |
+----------------------------------
+episodic reward: 32092.199999999804
+episodic reward: 32377.799999999796
+episodic reward: 32017.499999999804
+episodic reward: 32391.499999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 316       |
+|    fps             | 151       |
+|    time_elapsed    | 2084      |
+|    total_timesteps | 316316    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 2.58e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 316215    |
+----------------------------------
+episodic reward: 33270.09999999979
+episodic reward: 33098.89999999979
+episodic reward: 33343.19999999979
+episodic reward: 33697.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 320       |
+|    fps             | 151       |
+|    time_elapsed    | 2110      |
+|    total_timesteps | 320320    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 4.81e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 320219    |
+----------------------------------
+episodic reward: 33138.699999999786
+episodic reward: 32889.999999999796
+episodic reward: 31845.499999999796
+episodic reward: 33257.2999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 324       |
+|    fps             | 151       |
+|    time_elapsed    | 2136      |
+|    total_timesteps | 324324    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 7.83e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 324223    |
+----------------------------------
+episodic reward: 32990.299999999785
+episodic reward: 33028.39999999976
+episodic reward: 32924.09999999981
+episodic reward: 32506.399999999812
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 328       |
+|    fps             | 151       |
+|    time_elapsed    | 2163      |
+|    total_timesteps | 328328    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 2.16e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 328227    |
+----------------------------------
+episodic reward: 33827.09999999977
+episodic reward: 33745.59999999978
+episodic reward: 32407.299999999792
+episodic reward: 33540.49999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 332       |
+|    fps             | 151       |
+|    time_elapsed    | 2189      |
+|    total_timesteps | 332332    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 4.32e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 332231    |
+----------------------------------
+episodic reward: 32554.19999999978
+episodic reward: 32788.69999999979
+episodic reward: 32920.999999999774
+episodic reward: 31167.59999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 336       |
+|    fps             | 151       |
+|    time_elapsed    | 2216      |
+|    total_timesteps | 336336    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 3.52e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 336235    |
+----------------------------------
+episodic reward: 33120.39999999979
+episodic reward: 33146.29999999976
+episodic reward: 32397.499999999796
+episodic reward: 31792.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 340       |
+|    fps             | 151       |
+|    time_elapsed    | 2243      |
+|    total_timesteps | 340340    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 2.54e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 340239    |
+----------------------------------
+episodic reward: 32246.99999999979
+episodic reward: 33905.69999999978
+episodic reward: 32942.099999999795
+episodic reward: 33411.999999999774
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 344       |
+|    fps             | 151       |
+|    time_elapsed    | 2268      |
+|    total_timesteps | 344344    |
+| train/             |           |
+|    actor_loss      | -1.07e+06 |
+|    critic_loss     | 3.11e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 344243    |
+----------------------------------
+episodic reward: 32345.8999999998
+episodic reward: 33375.99999999979
+episodic reward: 32978.49999999978
+episodic reward: 33996.59999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 348       |
+|    fps             | 151       |
+|    time_elapsed    | 2293      |
+|    total_timesteps | 348348    |
+| train/             |           |
+|    actor_loss      | -1.08e+06 |
+|    critic_loss     | 3.97e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 348247    |
+----------------------------------
+episodic reward: 31650.39999999979
+episodic reward: 32065.899999999787
+episodic reward: 32698.799999999792
+episodic reward: 33049.6999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 352       |
+|    fps             | 151       |
+|    time_elapsed    | 2319      |
+|    total_timesteps | 352352    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 1.5e+10   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 352251    |
+----------------------------------
+episodic reward: 32664.499999999785
+episodic reward: 33362.6999999998
+episodic reward: 32016.49999999981
+episodic reward: 32580.999999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 356       |
+|    fps             | 151       |
+|    time_elapsed    | 2346      |
+|    total_timesteps | 356356    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.56e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 356255    |
+----------------------------------
+episodic reward: 32814.3999999998
+episodic reward: 32218.99999999981
+episodic reward: 32173.299999999825
+episodic reward: 34216.39999999976
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 360       |
+|    fps             | 151       |
+|    time_elapsed    | 2372      |
+|    total_timesteps | 360360    |
+| train/             |           |
+|    actor_loss      | -1.07e+06 |
+|    critic_loss     | 1.6e+10   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 360259    |
+----------------------------------
+episodic reward: 32683.799999999774
+episodic reward: 33694.99999999978
+episodic reward: 33417.19999999978
+episodic reward: 31607.29999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 364       |
+|    fps             | 151       |
+|    time_elapsed    | 2399      |
+|    total_timesteps | 364364    |
+| train/             |           |
+|    actor_loss      | -1.06e+06 |
+|    critic_loss     | 1.44e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 364263    |
+----------------------------------
+episodic reward: 33159.99999999978
+episodic reward: 32688.899999999816
+episodic reward: 32806.79999999977
+episodic reward: 33366.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 368       |
+|    fps             | 151       |
+|    time_elapsed    | 2426      |
+|    total_timesteps | 368368    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.47e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 368267    |
+----------------------------------
+episodic reward: 32541.1999999998
+episodic reward: 32921.2999999998
+episodic reward: 31836.499999999785
+episodic reward: 31612.499999999807
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 372       |
+|    fps             | 151       |
+|    time_elapsed    | 2452      |
+|    total_timesteps | 372372    |
+| train/             |           |
+|    actor_loss      | -1.08e+06 |
+|    critic_loss     | 3.69e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 372271    |
+----------------------------------
+episodic reward: 32103.29999999981
+episodic reward: 33090.19999999978
+episodic reward: 31998.499999999833
+episodic reward: 32226.099999999788
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 376       |
+|    fps             | 151       |
+|    time_elapsed    | 2478      |
+|    total_timesteps | 376376    |
+| train/             |           |
+|    actor_loss      | -1.09e+06 |
+|    critic_loss     | 3.24e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 376275    |
+----------------------------------
+episodic reward: 33539.49999999977
+episodic reward: 33205.19999999978
+episodic reward: 33198.99999999978
+episodic reward: 32493.6999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 380       |
+|    fps             | 151       |
+|    time_elapsed    | 2505      |
+|    total_timesteps | 380380    |
+| train/             |           |
+|    actor_loss      | -1.09e+06 |
+|    critic_loss     | 3.53e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 380279    |
+----------------------------------
+episodic reward: 32972.59999999977
+episodic reward: 31946.9999999998
+episodic reward: 33121.19999999978
+episodic reward: 32405.499999999774
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 384       |
+|    fps             | 151       |
+|    time_elapsed    | 2531      |
+|    total_timesteps | 384384    |
+| train/             |           |
+|    actor_loss      | -1.08e+06 |
+|    critic_loss     | 3.65e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 384283    |
+----------------------------------
+episodic reward: 33496.69999999978
+episodic reward: 32523.19999999981
+episodic reward: 31910.49999999979
+episodic reward: 32342.09999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 388       |
+|    fps             | 151       |
+|    time_elapsed    | 2558      |
+|    total_timesteps | 388388    |
+| train/             |           |
+|    actor_loss      | -1.01e+06 |
+|    critic_loss     | 1.24e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 388287    |
+----------------------------------
+episodic reward: 33134.999999999796
+episodic reward: 33200.39999999978
+episodic reward: 32302.1999999998
+episodic reward: 34934.99999999978
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 392      |
+|    fps             | 151      |
+|    time_elapsed    | 2584     |
+|    total_timesteps | 392392   |
+| train/             |          |
+|    actor_loss      | -1e+06   |
+|    critic_loss     | 8.73e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 392291   |
+---------------------------------
+episodic reward: 33006.69999999979
+episodic reward: 32897.2999999998
+episodic reward: 33340.899999999776
+episodic reward: 32581.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 396       |
+|    fps             | 151       |
+|    time_elapsed    | 2608      |
+|    total_timesteps | 396396    |
+| train/             |           |
+|    actor_loss      | -1.05e+06 |
+|    critic_loss     | 1.07e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 396295    |
+----------------------------------
+episodic reward: 32076.199999999793
+episodic reward: 31675.89999999981
+episodic reward: 32584.399999999783
+episodic reward: 33317.89999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 400       |
+|    fps             | 152       |
+|    time_elapsed    | 2632      |
+|    total_timesteps | 400400    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 1.34e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 400299    |
+----------------------------------
+episodic reward: 33118.199999999764
+episodic reward: 33367.19999999978
+episodic reward: 32543.299999999777
+episodic reward: 32631.099999999784
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 404       |
+|    fps             | 152       |
+|    time_elapsed    | 2656      |
+|    total_timesteps | 404404    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 1.31e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 404303    |
+----------------------------------
+episodic reward: 31658.59999999979
+episodic reward: 32151.099999999813
+episodic reward: 32197.999999999774
+episodic reward: 32208.499999999793
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 408       |
+|    fps             | 152       |
+|    time_elapsed    | 2680      |
+|    total_timesteps | 408408    |
+| train/             |           |
+|    actor_loss      | -1.08e+06 |
+|    critic_loss     | 4.09e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 408307    |
+----------------------------------
+episodic reward: 31640.199999999793
+episodic reward: 31924.099999999802
+episodic reward: 32766.299999999785
+episodic reward: 32873.29999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 412       |
+|    fps             | 152       |
+|    time_elapsed    | 2703      |
+|    total_timesteps | 412412    |
+| train/             |           |
+|    actor_loss      | -1.01e+06 |
+|    critic_loss     | 1.48e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 412311    |
+----------------------------------
+episodic reward: 32263.99999999979
+episodic reward: 31693.59999999981
+episodic reward: 32028.1999999998
+episodic reward: 32110.599999999802
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 416       |
+|    fps             | 152       |
+|    time_elapsed    | 2727      |
+|    total_timesteps | 416416    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 5.85e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 416315    |
+----------------------------------
+episodic reward: 32874.299999999785
+episodic reward: 32183.0999999998
+episodic reward: 32925.09999999978
+episodic reward: 32650.19999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 420       |
+|    fps             | 152       |
+|    time_elapsed    | 2751      |
+|    total_timesteps | 420420    |
+| train/             |           |
+|    actor_loss      | -1.04e+06 |
+|    critic_loss     | 1.15e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 420319    |
+----------------------------------
+episodic reward: 32620.89999999979
+episodic reward: 32459.89999999979
+episodic reward: 33006.699999999786
+episodic reward: 33375.099999999766
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 424       |
+|    fps             | 152       |
+|    time_elapsed    | 2775      |
+|    total_timesteps | 424424    |
+| train/             |           |
+|    actor_loss      | -1.01e+06 |
+|    critic_loss     | 7.19e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 424323    |
+----------------------------------
+episodic reward: 33157.7999999998
+episodic reward: 33219.49999999978
+episodic reward: 32796.899999999776
+episodic reward: 32462.799999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 428       |
+|    fps             | 153       |
+|    time_elapsed    | 2800      |
+|    total_timesteps | 428428    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 4.2e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 428327    |
+----------------------------------
+episodic reward: 32298.19999999979
+episodic reward: 33344.49999999978
+episodic reward: 32409.899999999783
+episodic reward: 33579.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 432       |
+|    fps             | 153       |
+|    time_elapsed    | 2824      |
+|    total_timesteps | 432432    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 1.26e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 432331    |
+----------------------------------
+episodic reward: 32517.299999999792
+episodic reward: 32248.799999999785
+episodic reward: 32861.49999999979
+episodic reward: 32347.099999999795
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 436       |
+|    fps             | 153       |
+|    time_elapsed    | 2848      |
+|    total_timesteps | 436436    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 4.19e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 436335    |
+----------------------------------
+episodic reward: 32407.299999999785
+episodic reward: 32855.599999999795
+episodic reward: 33404.899999999805
+episodic reward: 32367.499999999767
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 440       |
+|    fps             | 153       |
+|    time_elapsed    | 2872      |
+|    total_timesteps | 440440    |
+| train/             |           |
+|    actor_loss      | -9.96e+05 |
+|    critic_loss     | 7.02e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 440339    |
+----------------------------------
+episodic reward: 32512.6999999998
+episodic reward: 33150.6999999998
+episodic reward: 32684.399999999798
+episodic reward: 32786.199999999786
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 444      |
+|    fps             | 153      |
+|    time_elapsed    | 2895     |
+|    total_timesteps | 444444   |
+| train/             |          |
+|    actor_loss      | -1e+06   |
+|    critic_loss     | 5.94e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 444343   |
+---------------------------------
+episodic reward: 33629.69999999979
+episodic reward: 32042.899999999776
+episodic reward: 33217.69999999978
+episodic reward: 31809.799999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 448       |
+|    fps             | 153       |
+|    time_elapsed    | 2919      |
+|    total_timesteps | 448448    |
+| train/             |           |
+|    actor_loss      | -9.29e+05 |
+|    critic_loss     | 8.66e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 448347    |
+----------------------------------
+episodic reward: 33000.09999999978
+episodic reward: 31928.3999999998
+episodic reward: 32491.099999999784
+episodic reward: 32656.19999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 452       |
+|    fps             | 153       |
+|    time_elapsed    | 2944      |
+|    total_timesteps | 452452    |
+| train/             |           |
+|    actor_loss      | -1.03e+06 |
+|    critic_loss     | 5.63e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 452351    |
+----------------------------------
+episodic reward: 31473.99999999978
+episodic reward: 33139.9999999998
+episodic reward: 32179.19999999977
+episodic reward: 32482.999999999807
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 456      |
+|    fps             | 153      |
+|    time_elapsed    | 2968     |
+|    total_timesteps | 456456   |
+| train/             |          |
+|    actor_loss      | -1e+06   |
+|    critic_loss     | 1.35e+09 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 456355   |
+---------------------------------
+episodic reward: 32853.89999999978
+episodic reward: 33361.69999999979
+episodic reward: 33369.09999999977
+episodic reward: 32397.1999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 460       |
+|    fps             | 153       |
+|    time_elapsed    | 2991      |
+|    total_timesteps | 460460    |
+| train/             |           |
+|    actor_loss      | -1.01e+06 |
+|    critic_loss     | 6.3e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 460359    |
+----------------------------------
+episodic reward: 32662.399999999798
+episodic reward: 31556.09999999981
+episodic reward: 32830.499999999774
+episodic reward: 32981.99999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 464       |
+|    fps             | 154       |
+|    time_elapsed    | 3015      |
+|    total_timesteps | 464464    |
+| train/             |           |
+|    actor_loss      | -9.96e+05 |
+|    critic_loss     | 8.23e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 464363    |
+----------------------------------
+episodic reward: 32684.19999999979
+episodic reward: 31213.09999999983
+episodic reward: 33078.7999999998
+episodic reward: 33763.999999999774
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 468       |
+|    fps             | 154       |
+|    time_elapsed    | 3039      |
+|    total_timesteps | 468468    |
+| train/             |           |
+|    actor_loss      | -9.86e+05 |
+|    critic_loss     | 1.42e+10  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 468367    |
+----------------------------------
+episodic reward: 32797.29999999979
+episodic reward: 33571.69999999977
+episodic reward: 33725.9999999998
+episodic reward: 33212.19999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 472       |
+|    fps             | 154       |
+|    time_elapsed    | 3062      |
+|    total_timesteps | 472472    |
+| train/             |           |
+|    actor_loss      | -9.87e+05 |
+|    critic_loss     | 4.12e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 472371    |
+----------------------------------
+episodic reward: 33066.399999999776
+episodic reward: 32406.99999999981
+episodic reward: 31632.69999999984
+episodic reward: 31872.09999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 476       |
+|    fps             | 154       |
+|    time_elapsed    | 3086      |
+|    total_timesteps | 476476    |
+| train/             |           |
+|    actor_loss      | -9.57e+05 |
+|    critic_loss     | 6.82e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 476375    |
+----------------------------------
+episodic reward: 33904.29999999976
+episodic reward: 32746.399999999776
+episodic reward: 32581.89999999979
+episodic reward: 33516.7999999998
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 480      |
+|    fps             | 154      |
+|    time_elapsed    | 3109     |
+|    total_timesteps | 480480   |
+| train/             |          |
+|    actor_loss      | -1e+06   |
+|    critic_loss     | 5.99e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 480379   |
+---------------------------------
+episodic reward: 32899.49999999979
+episodic reward: 32846.4999999998
+episodic reward: 32398.599999999788
+episodic reward: 32518.499999999764
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 484      |
+|    fps             | 154      |
+|    time_elapsed    | 3133     |
+|    total_timesteps | 484484   |
+| train/             |          |
+|    actor_loss      | -9.6e+05 |
+|    critic_loss     | 4.46e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 484383   |
+---------------------------------
+episodic reward: 32249.299999999785
+episodic reward: 32294.899999999805
+episodic reward: 33199.49999999979
+episodic reward: 32644.099999999784
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 488       |
+|    fps             | 154       |
+|    time_elapsed    | 3157      |
+|    total_timesteps | 488488    |
+| train/             |           |
+|    actor_loss      | -1.02e+06 |
+|    critic_loss     | 7.47e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 488387    |
+----------------------------------
+episodic reward: 33597.49999999978
+episodic reward: 31998.19999999982
+episodic reward: 32786.099999999795
+episodic reward: 33436.89999999975
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 492       |
+|    fps             | 154       |
+|    time_elapsed    | 3181      |
+|    total_timesteps | 492492    |
+| train/             |           |
+|    actor_loss      | -9.73e+05 |
+|    critic_loss     | 4.81e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 492391    |
+----------------------------------
+episodic reward: 32394.89999999978
+episodic reward: 31975.199999999786
+episodic reward: 32518.299999999777
+episodic reward: 33291.799999999785
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 496       |
+|    fps             | 154       |
+|    time_elapsed    | 3205      |
+|    total_timesteps | 496496    |
+| train/             |           |
+|    actor_loss      | -9.37e+05 |
+|    critic_loss     | 5.18e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 496395    |
+----------------------------------
+episodic reward: 32762.6999999998
+episodic reward: 31883.199999999782
+episodic reward: 32809.19999999979
+episodic reward: 33203.69999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 500       |
+|    fps             | 155       |
+|    time_elapsed    | 3229      |
+|    total_timesteps | 500500    |
+| train/             |           |
+|    actor_loss      | -9.52e+05 |
+|    critic_loss     | 5.44e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 500399    |
+----------------------------------
+episodic reward: 32410.199999999815
+episodic reward: 33367.199999999786
+episodic reward: 32576.699999999793
+episodic reward: 34671.09999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 504       |
+|    fps             | 155       |
+|    time_elapsed    | 3252      |
+|    total_timesteps | 504504    |
+| train/             |           |
+|    actor_loss      | -9.28e+05 |
+|    critic_loss     | 7.08e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 504403    |
+----------------------------------
+episodic reward: 32147.099999999788
+episodic reward: 33425.799999999756
+episodic reward: 32166.79999999981
+episodic reward: 33163.39999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 508       |
+|    fps             | 155       |
+|    time_elapsed    | 3276      |
+|    total_timesteps | 508508    |
+| train/             |           |
+|    actor_loss      | -9.44e+05 |
+|    critic_loss     | 8.62e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 508407    |
+----------------------------------
+episodic reward: 33089.599999999766
+episodic reward: 33284.299999999785
+episodic reward: 32289.499999999793
+episodic reward: 32361.79999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 512       |
+|    fps             | 155       |
+|    time_elapsed    | 3300      |
+|    total_timesteps | 512512    |
+| train/             |           |
+|    actor_loss      | -9.68e+05 |
+|    critic_loss     | 5.64e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 512411    |
+----------------------------------
+episodic reward: 33192.09999999979
+episodic reward: 31946.899999999794
+episodic reward: 32336.699999999782
+episodic reward: 32405.59999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 516       |
+|    fps             | 155       |
+|    time_elapsed    | 3324      |
+|    total_timesteps | 516516    |
+| train/             |           |
+|    actor_loss      | -9.43e+05 |
+|    critic_loss     | 6.47e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 516415    |
+----------------------------------
+episodic reward: 33736.099999999795
+episodic reward: 32353.799999999806
+episodic reward: 32485.599999999795
+episodic reward: 32928.09999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 520       |
+|    fps             | 155       |
+|    time_elapsed    | 3348      |
+|    total_timesteps | 520520    |
+| train/             |           |
+|    actor_loss      | -9.17e+05 |
+|    critic_loss     | 8e+08     |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 520419    |
+----------------------------------
+episodic reward: 32460.59999999981
+episodic reward: 32958.499999999796
+episodic reward: 33510.09999999977
+episodic reward: 32751.799999999803
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 524       |
+|    fps             | 155       |
+|    time_elapsed    | 3372      |
+|    total_timesteps | 524524    |
+| train/             |           |
+|    actor_loss      | -9.43e+05 |
+|    critic_loss     | 5.46e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 524423    |
+----------------------------------
+episodic reward: 33419.7999999998
+episodic reward: 32471.499999999804
+episodic reward: 32641.999999999796
+episodic reward: 34328.299999999756
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 528       |
+|    fps             | 155       |
+|    time_elapsed    | 3395      |
+|    total_timesteps | 528528    |
+| train/             |           |
+|    actor_loss      | -9.51e+05 |
+|    critic_loss     | 7.62e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 528427    |
+----------------------------------
+episodic reward: 32889.299999999785
+episodic reward: 32022.89999999983
+episodic reward: 32604.09999999981
+episodic reward: 31927.099999999802
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 532       |
+|    fps             | 155       |
+|    time_elapsed    | 3419      |
+|    total_timesteps | 532532    |
+| train/             |           |
+|    actor_loss      | -9.46e+05 |
+|    critic_loss     | 5.13e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 532431    |
+----------------------------------
+episodic reward: 33836.09999999977
+episodic reward: 32312.999999999814
+episodic reward: 33063.799999999785
+episodic reward: 32519.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 536       |
+|    fps             | 155       |
+|    time_elapsed    | 3443      |
+|    total_timesteps | 536536    |
+| train/             |           |
+|    actor_loss      | -9.45e+05 |
+|    critic_loss     | 1.39e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 536435    |
+----------------------------------
+episodic reward: 32387.799999999785
+episodic reward: 32268.999999999807
+episodic reward: 32553.499999999774
+episodic reward: 32223.99999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 540       |
+|    fps             | 155       |
+|    time_elapsed    | 3467      |
+|    total_timesteps | 540540    |
+| train/             |           |
+|    actor_loss      | -9.41e+05 |
+|    critic_loss     | 1e+09     |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 540439    |
+----------------------------------
+episodic reward: 32241.599999999795
+episodic reward: 32864.69999999978
+episodic reward: 32934.79999999981
+episodic reward: 33196.999999999774
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 544       |
+|    fps             | 156       |
+|    time_elapsed    | 3490      |
+|    total_timesteps | 544544    |
+| train/             |           |
+|    actor_loss      | -9.28e+05 |
+|    critic_loss     | 1.18e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 544443    |
+----------------------------------
+episodic reward: 33236.89999999976
+episodic reward: 32059.699999999786
+episodic reward: 34108.69999999977
+episodic reward: 31918.6999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 548       |
+|    fps             | 156       |
+|    time_elapsed    | 3514      |
+|    total_timesteps | 548548    |
+| train/             |           |
+|    actor_loss      | -9.09e+05 |
+|    critic_loss     | 6.06e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 548447    |
+----------------------------------
+episodic reward: 31286.69999999981
+episodic reward: 32596.699999999804
+episodic reward: 33822.99999999977
+episodic reward: 33803.9999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 552       |
+|    fps             | 156       |
+|    time_elapsed    | 3538      |
+|    total_timesteps | 552552    |
+| train/             |           |
+|    actor_loss      | -9.36e+05 |
+|    critic_loss     | 1.13e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 552451    |
+----------------------------------
+episodic reward: 32530.1999999998
+episodic reward: 32404.699999999808
+episodic reward: 33344.89999999975
+episodic reward: 32092.799999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 556       |
+|    fps             | 156       |
+|    time_elapsed    | 3561      |
+|    total_timesteps | 556556    |
+| train/             |           |
+|    actor_loss      | -9.43e+05 |
+|    critic_loss     | 5.77e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 556455    |
+----------------------------------
+episodic reward: 32500.199999999808
+episodic reward: 31511.29999999983
+episodic reward: 32311.399999999798
+episodic reward: 32620.999999999778
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 560       |
+|    fps             | 156       |
+|    time_elapsed    | 3584      |
+|    total_timesteps | 560560    |
+| train/             |           |
+|    actor_loss      | -9.12e+05 |
+|    critic_loss     | 3.95e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 560459    |
+----------------------------------
+episodic reward: 33003.199999999786
+episodic reward: 32341.69999999979
+episodic reward: 32307.5999999998
+episodic reward: 32651.09999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 564       |
+|    fps             | 156       |
+|    time_elapsed    | 3608      |
+|    total_timesteps | 564564    |
+| train/             |           |
+|    actor_loss      | -9.18e+05 |
+|    critic_loss     | 6.62e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 564463    |
+----------------------------------
+episodic reward: 32830.6999999998
+episodic reward: 31583.199999999808
+episodic reward: 33025.39999999978
+episodic reward: 32700.399999999805
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 568       |
+|    fps             | 156       |
+|    time_elapsed    | 3631      |
+|    total_timesteps | 568568    |
+| train/             |           |
+|    actor_loss      | -9.41e+05 |
+|    critic_loss     | 6.34e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 568467    |
+----------------------------------
+episodic reward: 31964.299999999806
+episodic reward: 32104.099999999817
+episodic reward: 32188.099999999795
+episodic reward: 33570.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 572       |
+|    fps             | 156       |
+|    time_elapsed    | 3654      |
+|    total_timesteps | 572572    |
+| train/             |           |
+|    actor_loss      | -9.06e+05 |
+|    critic_loss     | 4.39e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 572471    |
+----------------------------------
+episodic reward: 31530.79999999982
+episodic reward: 33204.7999999998
+episodic reward: 33981.49999999976
+episodic reward: 32578.0999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 576       |
+|    fps             | 156       |
+|    time_elapsed    | 3677      |
+|    total_timesteps | 576576    |
+| train/             |           |
+|    actor_loss      | -9.53e+05 |
+|    critic_loss     | 5.69e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 576475    |
+----------------------------------
+episodic reward: 33342.39999999979
+episodic reward: 33001.6999999998
+episodic reward: 33018.09999999978
+episodic reward: 32499.499999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 580       |
+|    fps             | 156       |
+|    time_elapsed    | 3700      |
+|    total_timesteps | 580580    |
+| train/             |           |
+|    actor_loss      | -9.07e+05 |
+|    critic_loss     | 5.58e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 580479    |
+----------------------------------
+episodic reward: 33591.99999999979
+episodic reward: 32519.699999999793
+episodic reward: 33463.89999999979
+episodic reward: 31125.99999999982
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 584       |
+|    fps             | 156       |
+|    time_elapsed    | 3724      |
+|    total_timesteps | 584584    |
+| train/             |           |
+|    actor_loss      | -9.17e+05 |
+|    critic_loss     | 3.21e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 584483    |
+----------------------------------
+episodic reward: 33011.49999999979
+episodic reward: 32751.89999999981
+episodic reward: 33489.499999999796
+episodic reward: 32494.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 588       |
+|    fps             | 156       |
+|    time_elapsed    | 3749      |
+|    total_timesteps | 588588    |
+| train/             |           |
+|    actor_loss      | -9.21e+05 |
+|    critic_loss     | 4.71e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 588487    |
+----------------------------------
+episodic reward: 31340.199999999793
+episodic reward: 32814.899999999776
+episodic reward: 32762.599999999806
+episodic reward: 33429.299999999814
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 592       |
+|    fps             | 157       |
+|    time_elapsed    | 3773      |
+|    total_timesteps | 592592    |
+| train/             |           |
+|    actor_loss      | -9.08e+05 |
+|    critic_loss     | 8.07e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 592491    |
+----------------------------------
+episodic reward: 32322.099999999788
+episodic reward: 33194.399999999776
+episodic reward: 31859.09999999981
+episodic reward: 32982.899999999805
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 596       |
+|    fps             | 157       |
+|    time_elapsed    | 3796      |
+|    total_timesteps | 596596    |
+| train/             |           |
+|    actor_loss      | -9.13e+05 |
+|    critic_loss     | 7.45e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 596495    |
+----------------------------------
+episodic reward: 32442.09999999978
+episodic reward: 31836.499999999807
+episodic reward: 32244.199999999793
+episodic reward: 32752.099999999784
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 600       |
+|    fps             | 157       |
+|    time_elapsed    | 3819      |
+|    total_timesteps | 600600    |
+| train/             |           |
+|    actor_loss      | -8.86e+05 |
+|    critic_loss     | 3.55e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 600499    |
+----------------------------------
+episodic reward: 32901.89999999982
+episodic reward: 32965.5999999998
+episodic reward: 32761.999999999804
+episodic reward: 32347.7999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 604       |
+|    fps             | 157       |
+|    time_elapsed    | 3843      |
+|    total_timesteps | 604604    |
+| train/             |           |
+|    actor_loss      | -8.69e+05 |
+|    critic_loss     | 4.1e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 604503    |
+----------------------------------
+episodic reward: 31694.499999999814
+episodic reward: 33157.89999999978
+episodic reward: 33011.499999999796
+episodic reward: 32452.699999999775
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 608       |
+|    fps             | 157       |
+|    time_elapsed    | 3866      |
+|    total_timesteps | 608608    |
+| train/             |           |
+|    actor_loss      | -9.04e+05 |
+|    critic_loss     | 6.03e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 608507    |
+----------------------------------
+episodic reward: 33029.39999999981
+episodic reward: 33475.49999999977
+episodic reward: 32551.099999999777
+episodic reward: 32693.099999999795
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 612       |
+|    fps             | 157       |
+|    time_elapsed    | 3890      |
+|    total_timesteps | 612612    |
+| train/             |           |
+|    actor_loss      | -8.95e+05 |
+|    critic_loss     | 6.06e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 612511    |
+----------------------------------
+episodic reward: 32976.299999999785
+episodic reward: 32119.59999999981
+episodic reward: 33020.99999999978
+episodic reward: 32927.3999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 616       |
+|    fps             | 157       |
+|    time_elapsed    | 3913      |
+|    total_timesteps | 616616    |
+| train/             |           |
+|    actor_loss      | -9.24e+05 |
+|    critic_loss     | 5.6e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 616515    |
+----------------------------------
+episodic reward: 32528.09999999979
+episodic reward: 32361.999999999804
+episodic reward: 32119.299999999806
+episodic reward: 32989.19999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 620       |
+|    fps             | 157       |
+|    time_elapsed    | 3938      |
+|    total_timesteps | 620620    |
+| train/             |           |
+|    actor_loss      | -8.77e+05 |
+|    critic_loss     | 4.94e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 620519    |
+----------------------------------
+episodic reward: 31913.39999999979
+episodic reward: 31312.49999999981
+episodic reward: 33585.199999999764
+episodic reward: 32293.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 624       |
+|    fps             | 157       |
+|    time_elapsed    | 3962      |
+|    total_timesteps | 624624    |
+| train/             |           |
+|    actor_loss      | -8.96e+05 |
+|    critic_loss     | 5.07e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 624523    |
+----------------------------------
+episodic reward: 33115.79999999978
+episodic reward: 31348.299999999817
+episodic reward: 33193.999999999796
+episodic reward: 34042.699999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 628       |
+|    fps             | 157       |
+|    time_elapsed    | 3985      |
+|    total_timesteps | 628628    |
+| train/             |           |
+|    actor_loss      | -8.72e+05 |
+|    critic_loss     | 6.76e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 628527    |
+----------------------------------
+episodic reward: 32715.19999999977
+episodic reward: 32314.39999999979
+episodic reward: 32896.7999999998
+episodic reward: 33470.19999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 632       |
+|    fps             | 157       |
+|    time_elapsed    | 4009      |
+|    total_timesteps | 632632    |
+| train/             |           |
+|    actor_loss      | -8.92e+05 |
+|    critic_loss     | 4.31e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 632531    |
+----------------------------------
+episodic reward: 32536.799999999777
+episodic reward: 32426.49999999979
+episodic reward: 32506.1999999998
+episodic reward: 31757.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 636       |
+|    fps             | 157       |
+|    time_elapsed    | 4033      |
+|    total_timesteps | 636636    |
+| train/             |           |
+|    actor_loss      | -8.87e+05 |
+|    critic_loss     | 5.25e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 636535    |
+----------------------------------
+episodic reward: 32405.69999999981
+episodic reward: 33366.69999999978
+episodic reward: 32317.0999999998
+episodic reward: 33744.799999999756
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 640       |
+|    fps             | 157       |
+|    time_elapsed    | 4058      |
+|    total_timesteps | 640640    |
+| train/             |           |
+|    actor_loss      | -8.88e+05 |
+|    critic_loss     | 4.43e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 640539    |
+----------------------------------
+episodic reward: 31595.399999999787
+episodic reward: 31657.69999999982
+episodic reward: 32983.49999999977
+episodic reward: 31984.09999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 644       |
+|    fps             | 157       |
+|    time_elapsed    | 4081      |
+|    total_timesteps | 644644    |
+| train/             |           |
+|    actor_loss      | -8.47e+05 |
+|    critic_loss     | 3.75e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 644543    |
+----------------------------------
+episodic reward: 33901.49999999979
+episodic reward: 32522.599999999802
+episodic reward: 32545.89999999979
+episodic reward: 32690.299999999766
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 648       |
+|    fps             | 158       |
+|    time_elapsed    | 4105      |
+|    total_timesteps | 648648    |
+| train/             |           |
+|    actor_loss      | -8.87e+05 |
+|    critic_loss     | 4.69e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 648547    |
+----------------------------------
+episodic reward: 33054.799999999785
+episodic reward: 33197.7999999998
+episodic reward: 32459.199999999786
+episodic reward: 33636.69999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 652       |
+|    fps             | 158       |
+|    time_elapsed    | 4129      |
+|    total_timesteps | 652652    |
+| train/             |           |
+|    actor_loss      | -8.83e+05 |
+|    critic_loss     | 1.1e+09   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 652551    |
+----------------------------------
+episodic reward: 33978.199999999786
+episodic reward: 33069.9999999998
+episodic reward: 32690.899999999812
+episodic reward: 33144.89999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.63e+07  |
+| time/              |           |
+|    episodes        | 656       |
+|    fps             | 158       |
+|    time_elapsed    | 4153      |
+|    total_timesteps | 656656    |
+| train/             |           |
+|    actor_loss      | -8.67e+05 |
+|    critic_loss     | 5.13e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 656555    |
+----------------------------------
+episodic reward: 32805.299999999785
+episodic reward: 31766.199999999786
+episodic reward: 32766.0999999998
+episodic reward: 34572.59999999975
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 660       |
+|    fps             | 158       |
+|    time_elapsed    | 4177      |
+|    total_timesteps | 660660    |
+| train/             |           |
+|    actor_loss      | -8.82e+05 |
+|    critic_loss     | 4.19e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 660559    |
+----------------------------------
+episodic reward: 32562.599999999806
+episodic reward: 32231.199999999793
+episodic reward: 32383.09999999979
+episodic reward: 32592.199999999775
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 664       |
+|    fps             | 158       |
+|    time_elapsed    | 4201      |
+|    total_timesteps | 664664    |
+| train/             |           |
+|    actor_loss      | -8.92e+05 |
+|    critic_loss     | 4.9e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 664563    |
+----------------------------------
+episodic reward: 33281.49999999981
+episodic reward: 34735.699999999764
+episodic reward: 33338.09999999977
+episodic reward: 33594.3999999998
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 668      |
+|    fps             | 158      |
+|    time_elapsed    | 4225     |
+|    total_timesteps | 668668   |
+| train/             |          |
+|    actor_loss      | -8.9e+05 |
+|    critic_loss     | 9.8e+08  |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 668567   |
+---------------------------------
+episodic reward: 33266.299999999785
+episodic reward: 30817.79999999983
+episodic reward: 32499.49999999978
+episodic reward: 32834.39999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 672       |
+|    fps             | 158       |
+|    time_elapsed    | 4248      |
+|    total_timesteps | 672672    |
+| train/             |           |
+|    actor_loss      | -8.69e+05 |
+|    critic_loss     | 5.17e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 672571    |
+----------------------------------
+episodic reward: 33562.09999999982
+episodic reward: 32567.7999999998
+episodic reward: 31674.79999999978
+episodic reward: 32647.499999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 676       |
+|    fps             | 158       |
+|    time_elapsed    | 4272      |
+|    total_timesteps | 676676    |
+| train/             |           |
+|    actor_loss      | -8.89e+05 |
+|    critic_loss     | 1.06e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 676575    |
+----------------------------------
+episodic reward: 32985.19999999979
+episodic reward: 33716.099999999795
+episodic reward: 32120.39999999982
+episodic reward: 31313.499999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 680       |
+|    fps             | 158       |
+|    time_elapsed    | 4295      |
+|    total_timesteps | 680680    |
+| train/             |           |
+|    actor_loss      | -8.99e+05 |
+|    critic_loss     | 3.7e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 680579    |
+----------------------------------
+episodic reward: 32196.499999999778
+episodic reward: 33063.999999999774
+episodic reward: 32747.599999999784
+episodic reward: 32187.699999999804
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 684       |
+|    fps             | 158       |
+|    time_elapsed    | 4319      |
+|    total_timesteps | 684684    |
+| train/             |           |
+|    actor_loss      | -8.81e+05 |
+|    critic_loss     | 6.79e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 684583    |
+----------------------------------
+episodic reward: 32306.099999999784
+episodic reward: 32939.499999999796
+episodic reward: 32577.099999999784
+episodic reward: 31564.899999999798
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 688       |
+|    fps             | 158       |
+|    time_elapsed    | 4342      |
+|    total_timesteps | 688688    |
+| train/             |           |
+|    actor_loss      | -8.95e+05 |
+|    critic_loss     | 3.4e+09   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 688587    |
+----------------------------------
+episodic reward: 32781.29999999981
+episodic reward: 33210.699999999786
+episodic reward: 32325.499999999785
+episodic reward: 32214.199999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 692       |
+|    fps             | 158       |
+|    time_elapsed    | 4366      |
+|    total_timesteps | 692692    |
+| train/             |           |
+|    actor_loss      | -9.18e+05 |
+|    critic_loss     | 4.69e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 692591    |
+----------------------------------
+episodic reward: 33528.49999999979
+episodic reward: 32455.399999999783
+episodic reward: 32634.9999999998
+episodic reward: 32495.299999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 696       |
+|    fps             | 158       |
+|    time_elapsed    | 4392      |
+|    total_timesteps | 696696    |
+| train/             |           |
+|    actor_loss      | -8.87e+05 |
+|    critic_loss     | 6.94e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 696595    |
+----------------------------------
+episodic reward: 32309.599999999788
+episodic reward: 31837.899999999805
+episodic reward: 32458.499999999796
+episodic reward: 33195.89999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 700       |
+|    fps             | 158       |
+|    time_elapsed    | 4417      |
+|    total_timesteps | 700700    |
+| train/             |           |
+|    actor_loss      | -9.12e+05 |
+|    critic_loss     | 5.9e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 700599    |
+----------------------------------
+episodic reward: 32548.69999999981
+episodic reward: 32128.699999999793
+episodic reward: 32224.899999999805
+episodic reward: 33856.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 704       |
+|    fps             | 158       |
+|    time_elapsed    | 4440      |
+|    total_timesteps | 704704    |
+| train/             |           |
+|    actor_loss      | -8.75e+05 |
+|    critic_loss     | 3.78e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 704603    |
+----------------------------------
+episodic reward: 32583.699999999786
+episodic reward: 32677.6999999998
+episodic reward: 32258.29999999978
+episodic reward: 32618.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 708       |
+|    fps             | 158       |
+|    time_elapsed    | 4464      |
+|    total_timesteps | 708708    |
+| train/             |           |
+|    actor_loss      | -8.87e+05 |
+|    critic_loss     | 6.97e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 708607    |
+----------------------------------
+episodic reward: 33312.49999999978
+episodic reward: 31772.499999999825
+episodic reward: 32474.399999999812
+episodic reward: 32335.99999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 712       |
+|    fps             | 158       |
+|    time_elapsed    | 4488      |
+|    total_timesteps | 712712    |
+| train/             |           |
+|    actor_loss      | -8.93e+05 |
+|    critic_loss     | 4.23e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 712611    |
+----------------------------------
+episodic reward: 33015.39999999977
+episodic reward: 33111.399999999805
+episodic reward: 32130.7999999998
+episodic reward: 32028.899999999812
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 716       |
+|    fps             | 158       |
+|    time_elapsed    | 4513      |
+|    total_timesteps | 716716    |
+| train/             |           |
+|    actor_loss      | -8.97e+05 |
+|    critic_loss     | 6.16e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 716615    |
+----------------------------------
+episodic reward: 31841.199999999804
+episodic reward: 32033.399999999794
+episodic reward: 32847.19999999978
+episodic reward: 33015.2999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 720       |
+|    fps             | 158       |
+|    time_elapsed    | 4537      |
+|    total_timesteps | 720720    |
+| train/             |           |
+|    actor_loss      | -9.02e+05 |
+|    critic_loss     | 5.18e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 720619    |
+----------------------------------
+episodic reward: 31996.799999999825
+episodic reward: 32708.899999999798
+episodic reward: 32498.699999999782
+episodic reward: 33120.099999999766
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 724       |
+|    fps             | 158       |
+|    time_elapsed    | 4560      |
+|    total_timesteps | 724724    |
+| train/             |           |
+|    actor_loss      | -8.52e+05 |
+|    critic_loss     | 9.58e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 724623    |
+----------------------------------
+episodic reward: 33161.49999999978
+episodic reward: 32925.1999999998
+episodic reward: 34300.29999999978
+episodic reward: 31210.199999999797
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 728       |
+|    fps             | 158       |
+|    time_elapsed    | 4584      |
+|    total_timesteps | 728728    |
+| train/             |           |
+|    actor_loss      | -8.96e+05 |
+|    critic_loss     | 4.52e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 728627    |
+----------------------------------
+episodic reward: 33526.59999999977
+episodic reward: 32950.599999999766
+episodic reward: 32326.999999999804
+episodic reward: 32256.099999999795
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 732      |
+|    fps             | 159      |
+|    time_elapsed    | 4608     |
+|    total_timesteps | 732732   |
+| train/             |          |
+|    actor_loss      | -9.1e+05 |
+|    critic_loss     | 9.45e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 732631   |
+---------------------------------
+episodic reward: 33419.399999999776
+episodic reward: 31203.599999999817
+episodic reward: 33227.89999999981
+episodic reward: 32225.299999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 736       |
+|    fps             | 159       |
+|    time_elapsed    | 4632      |
+|    total_timesteps | 736736    |
+| train/             |           |
+|    actor_loss      | -8.95e+05 |
+|    critic_loss     | 7.52e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 736635    |
+----------------------------------
+episodic reward: 32907.999999999796
+episodic reward: 33790.199999999764
+episodic reward: 33042.49999999979
+episodic reward: 31726.899999999805
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 740       |
+|    fps             | 159       |
+|    time_elapsed    | 4657      |
+|    total_timesteps | 740740    |
+| train/             |           |
+|    actor_loss      | -8.84e+05 |
+|    critic_loss     | 3.38e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 740639    |
+----------------------------------
+episodic reward: 33050.59999999978
+episodic reward: 33647.59999999978
+episodic reward: 33205.2999999998
+episodic reward: 32233.499999999796
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 744       |
+|    fps             | 159       |
+|    time_elapsed    | 4681      |
+|    total_timesteps | 744744    |
+| train/             |           |
+|    actor_loss      | -8.83e+05 |
+|    critic_loss     | 4.99e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 744643    |
+----------------------------------
+episodic reward: 30716.299999999806
+episodic reward: 31980.599999999813
+episodic reward: 32568.099999999795
+episodic reward: 32605.79999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 748       |
+|    fps             | 159       |
+|    time_elapsed    | 4706      |
+|    total_timesteps | 748748    |
+| train/             |           |
+|    actor_loss      | -9.07e+05 |
+|    critic_loss     | 7.2e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 748647    |
+----------------------------------
+episodic reward: 31520.899999999783
+episodic reward: 31979.59999999977
+episodic reward: 31484.199999999808
+episodic reward: 33248.7999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 752       |
+|    fps             | 159       |
+|    time_elapsed    | 4731      |
+|    total_timesteps | 752752    |
+| train/             |           |
+|    actor_loss      | -9.02e+05 |
+|    critic_loss     | 4.32e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 752651    |
+----------------------------------
+episodic reward: 32903.799999999785
+episodic reward: 32699.799999999806
+episodic reward: 32780.099999999795
+episodic reward: 31711.599999999788
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 756       |
+|    fps             | 159       |
+|    time_elapsed    | 4757      |
+|    total_timesteps | 756756    |
+| train/             |           |
+|    actor_loss      | -8.91e+05 |
+|    critic_loss     | 3.42e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 756655    |
+----------------------------------
+episodic reward: 32311.899999999798
+episodic reward: 32384.399999999798
+episodic reward: 33208.2999999998
+episodic reward: 32785.8999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 760       |
+|    fps             | 159       |
+|    time_elapsed    | 4781      |
+|    total_timesteps | 760760    |
+| train/             |           |
+|    actor_loss      | -8.75e+05 |
+|    critic_loss     | 4.97e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 760659    |
+----------------------------------
+episodic reward: 33917.199999999786
+episodic reward: 33464.79999999977
+episodic reward: 33446.09999999977
+episodic reward: 32784.699999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 764       |
+|    fps             | 159       |
+|    time_elapsed    | 4806      |
+|    total_timesteps | 764764    |
+| train/             |           |
+|    actor_loss      | -8.81e+05 |
+|    critic_loss     | 4.31e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 764663    |
+----------------------------------
+episodic reward: 33239.699999999786
+episodic reward: 33050.19999999979
+episodic reward: 32200.099999999806
+episodic reward: 32666.599999999795
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 768       |
+|    fps             | 159       |
+|    time_elapsed    | 4831      |
+|    total_timesteps | 768768    |
+| train/             |           |
+|    actor_loss      | -8.59e+05 |
+|    critic_loss     | 3.13e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 768667    |
+----------------------------------
+episodic reward: 32604.099999999784
+episodic reward: 32712.899999999805
+episodic reward: 34724.79999999975
+episodic reward: 31694.399999999816
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 772       |
+|    fps             | 159       |
+|    time_elapsed    | 4855      |
+|    total_timesteps | 772772    |
+| train/             |           |
+|    actor_loss      | -9.06e+05 |
+|    critic_loss     | 3.67e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 772671    |
+----------------------------------
+episodic reward: 32810.89999999979
+episodic reward: 32824.89999999979
+episodic reward: 32005.699999999793
+episodic reward: 31835.699999999815
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 776       |
+|    fps             | 159       |
+|    time_elapsed    | 4879      |
+|    total_timesteps | 776776    |
+| train/             |           |
+|    actor_loss      | -9.04e+05 |
+|    critic_loss     | 3.97e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 776675    |
+----------------------------------
+episodic reward: 33486.19999999977
+episodic reward: 33554.299999999785
+episodic reward: 34094.999999999774
+episodic reward: 32880.99999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 780       |
+|    fps             | 159       |
+|    time_elapsed    | 4902      |
+|    total_timesteps | 780780    |
+| train/             |           |
+|    actor_loss      | -9.21e+05 |
+|    critic_loss     | 4.61e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 780679    |
+----------------------------------
+episodic reward: 32251.19999999981
+episodic reward: 33013.299999999785
+episodic reward: 32001.199999999808
+episodic reward: 32245.999999999796
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 784       |
+|    fps             | 159       |
+|    time_elapsed    | 4927      |
+|    total_timesteps | 784784    |
+| train/             |           |
+|    actor_loss      | -9.11e+05 |
+|    critic_loss     | 1.02e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 784683    |
+----------------------------------
+episodic reward: 33312.29999999979
+episodic reward: 32795.29999999979
+episodic reward: 32299.19999999982
+episodic reward: 31692.199999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 788       |
+|    fps             | 159       |
+|    time_elapsed    | 4950      |
+|    total_timesteps | 788788    |
+| train/             |           |
+|    actor_loss      | -9.16e+05 |
+|    critic_loss     | 2.6e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 788687    |
+----------------------------------
+episodic reward: 33276.999999999774
+episodic reward: 33379.19999999978
+episodic reward: 32425.799999999803
+episodic reward: 32424.59999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 792       |
+|    fps             | 159       |
+|    time_elapsed    | 4973      |
+|    total_timesteps | 792792    |
+| train/             |           |
+|    actor_loss      | -8.79e+05 |
+|    critic_loss     | 1.7e+09   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 792691    |
+----------------------------------
+episodic reward: 33002.69999999979
+episodic reward: 32909.99999999979
+episodic reward: 33511.899999999805
+episodic reward: 32750.799999999806
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 796       |
+|    fps             | 159       |
+|    time_elapsed    | 4996      |
+|    total_timesteps | 796796    |
+| train/             |           |
+|    actor_loss      | -8.89e+05 |
+|    critic_loss     | 5.67e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 796695    |
+----------------------------------
+episodic reward: 33494.399999999776
+episodic reward: 32399.199999999782
+episodic reward: 32630.99999999979
+episodic reward: 32659.699999999808
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 800       |
+|    fps             | 159       |
+|    time_elapsed    | 5020      |
+|    total_timesteps | 800800    |
+| train/             |           |
+|    actor_loss      | -8.89e+05 |
+|    critic_loss     | 3.2e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 800699    |
+----------------------------------
+episodic reward: 32851.99999999981
+episodic reward: 31822.3999999998
+episodic reward: 33245.199999999786
+episodic reward: 32492.999999999767
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 804       |
+|    fps             | 159       |
+|    time_elapsed    | 5043      |
+|    total_timesteps | 804804    |
+| train/             |           |
+|    actor_loss      | -9.16e+05 |
+|    critic_loss     | 3.16e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 804703    |
+----------------------------------
+episodic reward: 33226.69999999978
+episodic reward: 32372.6999999998
+episodic reward: 32913.199999999786
+episodic reward: 32302.499999999793
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 808       |
+|    fps             | 159       |
+|    time_elapsed    | 5066      |
+|    total_timesteps | 808808    |
+| train/             |           |
+|    actor_loss      | -9.27e+05 |
+|    critic_loss     | 3.67e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 808707    |
+----------------------------------
+episodic reward: 33129.89999999979
+episodic reward: 34338.29999999978
+episodic reward: 32256.999999999804
+episodic reward: 32010.69999999979
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 812      |
+|    fps             | 159      |
+|    time_elapsed    | 5091     |
+|    total_timesteps | 812812   |
+| train/             |          |
+|    actor_loss      | -9e+05   |
+|    critic_loss     | 3.48e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 812711   |
+---------------------------------
+episodic reward: 34061.79999999978
+episodic reward: 32705.799999999796
+episodic reward: 32826.799999999785
+episodic reward: 32334.899999999776
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 816       |
+|    fps             | 159       |
+|    time_elapsed    | 5115      |
+|    total_timesteps | 816816    |
+| train/             |           |
+|    actor_loss      | -9.04e+05 |
+|    critic_loss     | 3.87e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 816715    |
+----------------------------------
+episodic reward: 32927.19999999976
+episodic reward: 33409.29999999977
+episodic reward: 31633.999999999796
+episodic reward: 31844.999999999807
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 820       |
+|    fps             | 159       |
+|    time_elapsed    | 5138      |
+|    total_timesteps | 820820    |
+| train/             |           |
+|    actor_loss      | -9.09e+05 |
+|    critic_loss     | 3.77e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 820719    |
+----------------------------------
+episodic reward: 32566.099999999795
+episodic reward: 33940.699999999786
+episodic reward: 31538.299999999806
+episodic reward: 34973.099999999766
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 824       |
+|    fps             | 159       |
+|    time_elapsed    | 5162      |
+|    total_timesteps | 824824    |
+| train/             |           |
+|    actor_loss      | -8.86e+05 |
+|    critic_loss     | 3.32e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 824723    |
+----------------------------------
+episodic reward: 33117.399999999776
+episodic reward: 32209.499999999833
+episodic reward: 32850.299999999785
+episodic reward: 32815.59999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 828       |
+|    fps             | 159       |
+|    time_elapsed    | 5187      |
+|    total_timesteps | 828828    |
+| train/             |           |
+|    actor_loss      | -8.93e+05 |
+|    critic_loss     | 4.51e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 828727    |
+----------------------------------
+episodic reward: 32001.39999999978
+episodic reward: 33093.29999999979
+episodic reward: 33203.69999999977
+episodic reward: 32096.799999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 832       |
+|    fps             | 159       |
+|    time_elapsed    | 5211      |
+|    total_timesteps | 832832    |
+| train/             |           |
+|    actor_loss      | -9.27e+05 |
+|    critic_loss     | 3.45e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 832731    |
+----------------------------------
+episodic reward: 34484.39999999975
+episodic reward: 32742.5999999998
+episodic reward: 33623.099999999766
+episodic reward: 33363.499999999796
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 836       |
+|    fps             | 159       |
+|    time_elapsed    | 5234      |
+|    total_timesteps | 836836    |
+| train/             |           |
+|    actor_loss      | -8.96e+05 |
+|    critic_loss     | 3.22e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 836735    |
+----------------------------------
+episodic reward: 32740.99999999979
+episodic reward: 31842.499999999825
+episodic reward: 31600.499999999804
+episodic reward: 34255.59999999975
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 840       |
+|    fps             | 159       |
+|    time_elapsed    | 5258      |
+|    total_timesteps | 840840    |
+| train/             |           |
+|    actor_loss      | -9.32e+05 |
+|    critic_loss     | 3.76e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 840739    |
+----------------------------------
+episodic reward: 33527.49999999979
+episodic reward: 33210.59999999978
+episodic reward: 32967.29999999977
+episodic reward: 32014.299999999814
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 844       |
+|    fps             | 159       |
+|    time_elapsed    | 5282      |
+|    total_timesteps | 844844    |
+| train/             |           |
+|    actor_loss      | -9.03e+05 |
+|    critic_loss     | 2.95e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 844743    |
+----------------------------------
+episodic reward: 33316.29999999978
+episodic reward: 33133.59999999979
+episodic reward: 33188.0999999998
+episodic reward: 32706.299999999777
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 848       |
+|    fps             | 159       |
+|    time_elapsed    | 5306      |
+|    total_timesteps | 848848    |
+| train/             |           |
+|    actor_loss      | -9.13e+05 |
+|    critic_loss     | 5.02e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 848747    |
+----------------------------------
+episodic reward: 32695.69999999979
+episodic reward: 33006.09999999978
+episodic reward: 32929.799999999814
+episodic reward: 33543.699999999815
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 852       |
+|    fps             | 160       |
+|    time_elapsed    | 5329      |
+|    total_timesteps | 852852    |
+| train/             |           |
+|    actor_loss      | -9.12e+05 |
+|    critic_loss     | 4.38e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 852751    |
+----------------------------------
+episodic reward: 32050.399999999798
+episodic reward: 32222.5999999998
+episodic reward: 33044.699999999786
+episodic reward: 32638.699999999793
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 856       |
+|    fps             | 160       |
+|    time_elapsed    | 5353      |
+|    total_timesteps | 856856    |
+| train/             |           |
+|    actor_loss      | -9.09e+05 |
+|    critic_loss     | 2.75e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 856755    |
+----------------------------------
+episodic reward: 33039.099999999795
+episodic reward: 32889.8999999998
+episodic reward: 32787.69999999978
+episodic reward: 33764.699999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 860       |
+|    fps             | 160       |
+|    time_elapsed    | 5376      |
+|    total_timesteps | 860860    |
+| train/             |           |
+|    actor_loss      | -9.39e+05 |
+|    critic_loss     | 4.67e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 860759    |
+----------------------------------
+episodic reward: 32096.79999999983
+episodic reward: 32908.799999999785
+episodic reward: 32702.199999999786
+episodic reward: 32692.59999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.65e+07  |
+| time/              |           |
+|    episodes        | 864       |
+|    fps             | 160       |
+|    time_elapsed    | 5399      |
+|    total_timesteps | 864864    |
+| train/             |           |
+|    actor_loss      | -9.13e+05 |
+|    critic_loss     | 7.48e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 864763    |
+----------------------------------
+episodic reward: 33280.799999999785
+episodic reward: 32090.199999999786
+episodic reward: 31950.69999999977
+episodic reward: 30952.69999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 868       |
+|    fps             | 160       |
+|    time_elapsed    | 5422      |
+|    total_timesteps | 868868    |
+| train/             |           |
+|    actor_loss      | -9.29e+05 |
+|    critic_loss     | 9.96e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 868767    |
+----------------------------------
+episodic reward: 32825.799999999785
+episodic reward: 33241.49999999978
+episodic reward: 31987.099999999817
+episodic reward: 33077.799999999814
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 872       |
+|    fps             | 160       |
+|    time_elapsed    | 5445      |
+|    total_timesteps | 872872    |
+| train/             |           |
+|    actor_loss      | -9.35e+05 |
+|    critic_loss     | 2.8e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 872771    |
+----------------------------------
+episodic reward: 32260.299999999796
+episodic reward: 33006.7999999998
+episodic reward: 32990.89999999978
+episodic reward: 31744.69999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 876       |
+|    fps             | 160       |
+|    time_elapsed    | 5474      |
+|    total_timesteps | 876876    |
+| train/             |           |
+|    actor_loss      | -9.28e+05 |
+|    critic_loss     | 3.4e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 876775    |
+----------------------------------
+episodic reward: 33099.0999999998
+episodic reward: 32426.29999999977
+episodic reward: 32135.599999999817
+episodic reward: 32127.599999999817
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 880       |
+|    fps             | 160       |
+|    time_elapsed    | 5504      |
+|    total_timesteps | 880880    |
+| train/             |           |
+|    actor_loss      | -9.19e+05 |
+|    critic_loss     | 2.87e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 880779    |
+----------------------------------
+episodic reward: 32479.299999999792
+episodic reward: 31987.1999999998
+episodic reward: 32814.399999999776
+episodic reward: 33121.19999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 884       |
+|    fps             | 159       |
+|    time_elapsed    | 5533      |
+|    total_timesteps | 884884    |
+| train/             |           |
+|    actor_loss      | -9.13e+05 |
+|    critic_loss     | 4.02e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 884783    |
+----------------------------------
+episodic reward: 32477.69999999978
+episodic reward: 32480.39999999977
+episodic reward: 32073.49999999978
+episodic reward: 33027.699999999815
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 888       |
+|    fps             | 159       |
+|    time_elapsed    | 5564      |
+|    total_timesteps | 888888    |
+| train/             |           |
+|    actor_loss      | -9.49e+05 |
+|    critic_loss     | 3.23e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 888787    |
+----------------------------------
+episodic reward: 32908.19999999978
+episodic reward: 32496.99999999979
+episodic reward: 32551.699999999757
+episodic reward: 33390.9999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 892       |
+|    fps             | 159       |
+|    time_elapsed    | 5594      |
+|    total_timesteps | 892892    |
+| train/             |           |
+|    actor_loss      | -9.71e+05 |
+|    critic_loss     | 4.39e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 892791    |
+----------------------------------
+episodic reward: 32496.699999999815
+episodic reward: 32135.09999999978
+episodic reward: 32490.999999999778
+episodic reward: 32146.899999999798
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 896      |
+|    fps             | 159      |
+|    time_elapsed    | 5624     |
+|    total_timesteps | 896896   |
+| train/             |          |
+|    actor_loss      | -9.3e+05 |
+|    critic_loss     | 5.21e+09 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 896795   |
+---------------------------------
+episodic reward: 34246.29999999977
+episodic reward: 32505.099999999802
+episodic reward: 32906.29999999978
+episodic reward: 33821.79999999977
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 900       |
+|    fps             | 159       |
+|    time_elapsed    | 5654      |
+|    total_timesteps | 900900    |
+| train/             |           |
+|    actor_loss      | -9.48e+05 |
+|    critic_loss     | 4.92e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 900799    |
+----------------------------------
+episodic reward: 31277.49999999979
+episodic reward: 33801.199999999786
+episodic reward: 32351.799999999796
+episodic reward: 33353.19999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 904       |
+|    fps             | 159       |
+|    time_elapsed    | 5685      |
+|    total_timesteps | 904904    |
+| train/             |           |
+|    actor_loss      | -9.42e+05 |
+|    critic_loss     | 4.44e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 904803    |
+----------------------------------
+episodic reward: 32867.69999999979
+episodic reward: 32784.89999999981
+episodic reward: 32712.39999999978
+episodic reward: 33191.899999999805
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 908       |
+|    fps             | 159       |
+|    time_elapsed    | 5714      |
+|    total_timesteps | 908908    |
+| train/             |           |
+|    actor_loss      | -9.28e+05 |
+|    critic_loss     | 5.64e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 908807    |
+----------------------------------
+episodic reward: 34128.499999999745
+episodic reward: 33053.89999999979
+episodic reward: 32214.69999999977
+episodic reward: 32455.799999999792
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 912       |
+|    fps             | 159       |
+|    time_elapsed    | 5738      |
+|    total_timesteps | 912912    |
+| train/             |           |
+|    actor_loss      | -9.43e+05 |
+|    critic_loss     | 6.17e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 912811    |
+----------------------------------
+episodic reward: 32452.099999999817
+episodic reward: 32391.6999999998
+episodic reward: 32064.099999999824
+episodic reward: 32206.0999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 916       |
+|    fps             | 159       |
+|    time_elapsed    | 5761      |
+|    total_timesteps | 916916    |
+| train/             |           |
+|    actor_loss      | -9.58e+05 |
+|    critic_loss     | 4.49e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 916815    |
+----------------------------------
+episodic reward: 31841.49999999981
+episodic reward: 33208.89999999981
+episodic reward: 33811.499999999774
+episodic reward: 33063.9999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 920       |
+|    fps             | 159       |
+|    time_elapsed    | 5787      |
+|    total_timesteps | 920920    |
+| train/             |           |
+|    actor_loss      | -9.45e+05 |
+|    critic_loss     | 5.47e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 920819    |
+----------------------------------
+episodic reward: 33577.09999999977
+episodic reward: 31674.399999999787
+episodic reward: 32224.799999999796
+episodic reward: 31767.699999999815
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 924       |
+|    fps             | 158       |
+|    time_elapsed    | 5817      |
+|    total_timesteps | 924924    |
+| train/             |           |
+|    actor_loss      | -9.48e+05 |
+|    critic_loss     | 2.79e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 924823    |
+----------------------------------
+episodic reward: 34316.799999999785
+episodic reward: 33510.999999999774
+episodic reward: 33163.69999999981
+episodic reward: 33021.299999999785
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 928       |
+|    fps             | 158       |
+|    time_elapsed    | 5846      |
+|    total_timesteps | 928928    |
+| train/             |           |
+|    actor_loss      | -9.31e+05 |
+|    critic_loss     | 4.17e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 928827    |
+----------------------------------
+episodic reward: 32961.79999999979
+episodic reward: 32834.39999999978
+episodic reward: 33219.399999999776
+episodic reward: 33651.2999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 932       |
+|    fps             | 158       |
+|    time_elapsed    | 5877      |
+|    total_timesteps | 932932    |
+| train/             |           |
+|    actor_loss      | -9.78e+05 |
+|    critic_loss     | 2.42e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 932831    |
+----------------------------------
+episodic reward: 30782.09999999984
+episodic reward: 32548.99999999979
+episodic reward: 33391.89999999979
+episodic reward: 32478.799999999803
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 936       |
+|    fps             | 158       |
+|    time_elapsed    | 5906      |
+|    total_timesteps | 936936    |
+| train/             |           |
+|    actor_loss      | -9.75e+05 |
+|    critic_loss     | 2.98e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 936835    |
+----------------------------------
+episodic reward: 32540.399999999787
+episodic reward: 33339.999999999774
+episodic reward: 31299.3999999998
+episodic reward: 33639.199999999786
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 940       |
+|    fps             | 158       |
+|    time_elapsed    | 5936      |
+|    total_timesteps | 940940    |
+| train/             |           |
+|    actor_loss      | -9.18e+05 |
+|    critic_loss     | 3.73e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 940839    |
+----------------------------------
+episodic reward: 32396.2999999998
+episodic reward: 33538.99999999978
+episodic reward: 32695.99999999979
+episodic reward: 31700.599999999813
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 944      |
+|    fps             | 158      |
+|    time_elapsed    | 5965     |
+|    total_timesteps | 944944   |
+| train/             |          |
+|    actor_loss      | -9.7e+05 |
+|    critic_loss     | 2.76e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 944843   |
+---------------------------------
+episodic reward: 33915.19999999976
+episodic reward: 33081.999999999796
+episodic reward: 32884.999999999774
+episodic reward: 31840.799999999832
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 948       |
+|    fps             | 158       |
+|    time_elapsed    | 5995      |
+|    total_timesteps | 948948    |
+| train/             |           |
+|    actor_loss      | -9.55e+05 |
+|    critic_loss     | 2.2e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 948847    |
+----------------------------------
+episodic reward: 32672.39999999979
+episodic reward: 32551.199999999797
+episodic reward: 33558.99999999976
+episodic reward: 32264.7999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 952       |
+|    fps             | 158       |
+|    time_elapsed    | 6025      |
+|    total_timesteps | 952952    |
+| train/             |           |
+|    actor_loss      | -9.84e+05 |
+|    critic_loss     | 3.1e+08   |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 952851    |
+----------------------------------
+episodic reward: 31728.39999999979
+episodic reward: 32566.29999999979
+episodic reward: 31921.799999999785
+episodic reward: 32096.299999999814
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 956       |
+|    fps             | 157       |
+|    time_elapsed    | 6057      |
+|    total_timesteps | 956956    |
+| train/             |           |
+|    actor_loss      | -9.84e+05 |
+|    critic_loss     | 7.94e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 956855    |
+----------------------------------
+episodic reward: 33474.49999999979
+episodic reward: 32790.79999999978
+episodic reward: 32691.299999999806
+episodic reward: 33356.69999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 960       |
+|    fps             | 157       |
+|    time_elapsed    | 6087      |
+|    total_timesteps | 960960    |
+| train/             |           |
+|    actor_loss      | -9.81e+05 |
+|    critic_loss     | 2.29e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 960859    |
+----------------------------------
+episodic reward: 32102.99999999981
+episodic reward: 32006.199999999793
+episodic reward: 32684.799999999796
+episodic reward: 32919.29999999981
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 964       |
+|    fps             | 157       |
+|    time_elapsed    | 6112      |
+|    total_timesteps | 964964    |
+| train/             |           |
+|    actor_loss      | -9.63e+05 |
+|    critic_loss     | 2.55e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 964863    |
+----------------------------------
+episodic reward: 32185.29999999979
+episodic reward: 32667.199999999793
+episodic reward: 33133.1999999998
+episodic reward: 33280.899999999776
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 968       |
+|    fps             | 157       |
+|    time_elapsed    | 6138      |
+|    total_timesteps | 968968    |
+| train/             |           |
+|    actor_loss      | -9.91e+05 |
+|    critic_loss     | 5.61e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 968867    |
+----------------------------------
+episodic reward: 32298.299999999806
+episodic reward: 33410.19999999979
+episodic reward: 33664.09999999977
+episodic reward: 31845.499999999814
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1e+03    |
+|    ep_rew_mean     | 1.64e+07 |
+| time/              |          |
+|    episodes        | 972      |
+|    fps             | 157      |
+|    time_elapsed    | 6164     |
+|    total_timesteps | 972972   |
+| train/             |          |
+|    actor_loss      | -9.6e+05 |
+|    critic_loss     | 4.85e+08 |
+|    learning_rate   | 0.0005   |
+|    n_updates       | 972871   |
+---------------------------------
+episodic reward: 32903.19999999978
+episodic reward: 33092.699999999786
+episodic reward: 32939.5999999998
+episodic reward: 32954.39999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 976       |
+|    fps             | 157       |
+|    time_elapsed    | 6189      |
+|    total_timesteps | 976976    |
+| train/             |           |
+|    actor_loss      | -9.56e+05 |
+|    critic_loss     | 2.31e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 976875    |
+----------------------------------
+episodic reward: 32046.799999999806
+episodic reward: 32888.8999999998
+episodic reward: 31919.499999999804
+episodic reward: 32988.09999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 980       |
+|    fps             | 157       |
+|    time_elapsed    | 6215      |
+|    total_timesteps | 980980    |
+| train/             |           |
+|    actor_loss      | -9.62e+05 |
+|    critic_loss     | 2.17e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 980879    |
+----------------------------------
+episodic reward: 31894.699999999793
+episodic reward: 32524.89999999979
+episodic reward: 33144.69999999977
+episodic reward: 33924.49999999978
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 984       |
+|    fps             | 157       |
+|    time_elapsed    | 6239      |
+|    total_timesteps | 984984    |
+| train/             |           |
+|    actor_loss      | -9.99e+05 |
+|    critic_loss     | 7.25e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 984883    |
+----------------------------------
+episodic reward: 32575.59999999978
+episodic reward: 32539.699999999808
+episodic reward: 32673.49999999978
+episodic reward: 32230.399999999776
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 988       |
+|    fps             | 157       |
+|    time_elapsed    | 6266      |
+|    total_timesteps | 988988    |
+| train/             |           |
+|    actor_loss      | -9.79e+05 |
+|    critic_loss     | 4.38e+08  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 988887    |
+----------------------------------
+episodic reward: 32853.5999999998
+episodic reward: 32316.899999999805
+episodic reward: 32076.399999999805
+episodic reward: 33065.3999999998
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 992       |
+|    fps             | 157       |
+|    time_elapsed    | 6290      |
+|    total_timesteps | 992992    |
+| train/             |           |
+|    actor_loss      | -9.66e+05 |
+|    critic_loss     | 6.52e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 992891    |
+----------------------------------
+episodic reward: 32646.699999999808
+episodic reward: 31776.799999999796
+episodic reward: 33675.799999999785
+episodic reward: 31871.69999999979
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1e+03     |
+|    ep_rew_mean     | 1.64e+07  |
+| time/              |           |
+|    episodes        | 996       |
+|    fps             | 157       |
+|    time_elapsed    | 6313      |
+|    total_timesteps | 996996    |
+| train/             |           |
+|    actor_loss      | -9.95e+05 |
+|    critic_loss     | 1.52e+09  |
+|    learning_rate   | 0.0005    |
+|    n_updates       | 996895    |
+----------------------------------
+episodic reward: 32268.39999999979
+episodic reward: 32588.699999999797
+episodic reward: 33720.399999999754

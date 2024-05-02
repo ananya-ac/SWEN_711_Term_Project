@@ -1,7 +1,7 @@
 # imports
 
 # utility functions
-def sort_by_elapsed_time(obj_list:list, key, current_time):
+def sort_by_elapsed_time(obj_list, key, current_time):
     # implements bucket sort, key = elapsed time
     elapsed_time = {}
     for ele in obj_list:

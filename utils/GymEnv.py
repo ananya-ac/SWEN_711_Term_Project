@@ -11,36 +11,28 @@ import math, pickle
 
 class RideGrid(Env):
 
-  def __init__(self, saved_trips:str):
+  def __init__(self, saved_trips):
 
     self.done = False
     self.action_space = Box(low = np.ones(shape = (4)) * 0.5, high = np.ones(shape = (4)) * 2.0)
     spaces = {"vehicle_grid": Box(low = np.zeros(shape = (4,4)), high = np.ones(shape = (4,4)) * 4),
-              "request_grid": Box(low = np.zeros(shape = (4,4)), high = np.ones(shape = (4,4)) * 4),
-              "zonal_revenue": Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000000),
-              "zonal_idle_time" : Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000)}
+              "request_grid": Box(low = np.zeros(shape = (4,4)), high = np.ones(shape = (4,4)) * 50)}
+            #   "zonal_revenue": Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000000),
+            #  "zonal_idle_time" : Box(low = np.zeros(shape = 4), high = np.ones(shape = 4) * 100000)}
     self.observation_space = Dict(spaces)
     self.trip_tracker = None
     self.all_vehicles = None
-    with open(saved_trips, "rb") as f:
-        self.trips = pickle.load(f)
     
 
   def step(self, action):
 
-    self.grid.px_i = action
+    self.grid.px_i = action[:]
     if self.curr_time > 3:
         self.grid.request_grid = self.trip_tracker.pop_expired_trips(self.curr_time, self.grid.request_grid)
     # if self.curr_time % 3 == 0:  #and self.curr_time < 10:
     #     print(f'Generating New Trips @ Curr time == {self.curr_time}!!')
-    if self.curr_time<950:
-        to_be_added = [t for t in self.trips if t.pickup_time == self.curr_time and t.source!=t.destination ]
-        for t in to_be_added:
-            self.trips.pop(self.trips.index(t))
-            # print(t)
-        for t in to_be_added:
-            self.grid.request_grid[t.source][t.destination] += 1
-        # print(f"new_trips_added = {len(to_be_added)}")
+    if self.curr_time%2==0:
+        to_be_added = self.grid.generate_trips(self.curr_time)
         self.trip_tracker.add_new_trips(to_be_added)
     # delete = []
     # for tr in range(len(self.trip_tracker.assigned)):
@@ -125,20 +117,20 @@ class RideGrid(Env):
     
      
     observation = {'vehicle_grid' : self.grid.vehicle_grid,
-                  'request_grid' : self.grid.request_grid,
-                  'zonal_revenue' : self.grid.zonal_profit,
-                  'zonal_idle_time' : avg_stay_time}
+                  'request_grid' : self.grid.request_grid}
+                #   'zonal_revenue' : self.grid.zonal_profit,
+                  #'zonal_idle_time' : avg_stay_time}
 
     
     # REWARD
     reward = self.grid.zonal_profit.sum() 
     #Check Done
     if self.curr_time == 1000:
+      print(reward)
       self.done = True
-    print('Step-{0} Price Mult avg -{1:.2f} Repositioned Vehicles -{2} REWARD - {3}'.format(
-        self.curr_time,
-        float(np.sum(self.grid.px_i)/self.grid.px_i.shape[0]), count_repos, reward))
-    # print(f'Reward- {reward}')
+      self.epi_reward = reward
+      
+    # print(action[0], action[1],action[2], action[3])
     # print(len(self.trip_tracker.assigned))
     # for i in self.trip_tracker.assigned:
     #     print(i)
@@ -156,11 +148,11 @@ class RideGrid(Env):
     all_vehicles = []
     curr_time = 0
     num_cars = 4
-
+    self.epi_reward = 0
     self.grid= Grid(curr_time, dim = 4,
                lambda_trip_gen = 4,
                num_cars = num_cars,
-               max_wait_time = 5)
+               max_wait_time = 3)
 
     self.trip_tracker = TripTracker(grid=self.grid)
     self.grid.zonal_profit = np.ones(shape=self.grid.dim)
@@ -172,5 +164,6 @@ class RideGrid(Env):
 
     return ({'vehicle_grid' : self.grid.vehicle_grid,
             'request_grid' : np.zeros(shape = (self.grid.dim, self.grid.dim)),
-            'zonal_revenue' : np.zeros(shape = self.grid.dim),
-            'zonal_idle_time' : np.zeros(shape = self.grid.dim)}, {})
+            # 'zonal_revenue' : np.zeros(shape = self.grid.dim),
+            #'zonal_idle_time' : np.zeros(shape = self.grid.dim)}, {})
+            },{})
